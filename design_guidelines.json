@@ -1,0 +1,150 @@
+{
+  "identity": {
+    "name": "UniWese",
+    "persona": "E1: The Anti-AI Designer",
+    "mission": "Create a mobile-first college application platform that feels organic, trustworthy, and distinctly Indian yet globally aspirational. Avoid the sterile 'medical' look of standard green apps. Aim for 'Growth & Opportunity'.",
+    "principles": [
+      "Fusion over Imitation: Mix academic prestige with consumer app fluidity.",
+      "Thumb-Driven Design: Primary actions must be within the 'thumb zone' (bottom 40% of screen).",
+      "Content is King: Data (deadlines, scores) must be scanned, not read.",
+      "Green is Growth: Use the brand green (#338038) for progress and success, not just decoration.",
+      "Soft Modernity: High rounded corners (12px-16px) and deep soft shadows to create a friendly, approachable vibe."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "primary": "Plus Jakarta Sans, sans-serif",
+      "secondary": "Inter, sans-serif"
+    },
+    "usage": {
+      "headings": {
+        "font": "Plus Jakarta Sans",
+        "weight": "Bold (700) or ExtraBold (800)",
+        "tracking": "tight",
+        "styles": "text-2xl md:text-3xl lg:text-4xl text-[#1A1D1F]"
+      },
+      "body": {
+        "font": "Plus Jakarta Sans",
+        "weight": "Regular (400) or Medium (500)",
+        "tracking": "normal",
+        "styles": "text-base text-slate-600 leading-relaxed"
+      },
+      "labels": {
+        "font": "Plus Jakarta Sans",
+        "weight": "Bold (700)",
+        "tracking": "wide",
+        "styles": "uppercase text-xs text-slate-500"
+      }
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "default": "#338038",
+        "hover": "#2a6e30",
+        "foreground": "#FFFFFF",
+        "description": "Deep vibrant green. Use for Primary Actions (Login, Apply), Active States, and Success Indicators."
+      },
+      "background": {
+        "body": "#F4F7F9",
+        "card": "#FFFFFF",
+        "input": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1A1D1F",
+        "secondary": "#64748B",
+        "muted": "#94A3B8"
+      },
+      "status": {
+        "success": "#338038",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      }
+    },
+    "tailwind_config_instruction": "Update your tailwind.config.js to set 'primary' color to hsl(124, 43%, 35%) which approximates #338038. Set 'radius' to 0.75rem (12px)."
+  },
+  "layout": {
+    "grid_system": {
+      "mobile": "grid-cols-1 gap-4 p-4",
+      "tablet": "grid-cols-2 gap-6 p-6",
+      "desktop": "grid-cols-12 gap-8 p-8 max-w-7xl mx-auto"
+    },
+    "bento_grid": {
+      "description": "Use for dashboard summaries. Mix square (1x1) and rectangular (2x1) cards.",
+      "classes": "grid grid-cols-2 gap-4 auto-rows-[180px]"
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-12",
+      "text_gap": "mb-4"
+    },
+    "mobile_first_rules": [
+      "Navigation: Use a fixed Bottom Navigation Bar for mobile views (hidden on desktop).",
+      "Touch Targets: All interactive elements must be at least 44px height.",
+      "Reachability: Place primary 'Floating Action Buttons' or 'Next' buttons at the bottom right or bottom center."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#338038] hover:bg-[#2a6e30] text-white rounded-xl h-12 px-6 font-bold shadow-md transition-all active:scale-95",
+      "secondary": "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 rounded-xl h-12 px-6 font-medium shadow-sm"
+    },
+    "cards": {
+      "base": "bg-white rounded-2xl shadow-sm border border-slate-100 p-5 hover:shadow-md transition-shadow",
+      "interactive": "cursor-pointer hover:border-[#338038]/30 hover:ring-2 hover:ring-[#338038]/10"
+    },
+    "inputs": {
+      "base": "bg-white border-slate-200 focus:border-[#338038] focus:ring-[#338038]/20 rounded-xl h-12 px-4 text-base shadow-sm"
+    },
+    "navigation": {
+      "bottom_bar": "fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 h-16 flex items-center justify-around z-50 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]",
+      "bottom_bar_item": "flex flex-col items-center justify-center gap-1 text-xs font-medium text-slate-400 data-[active=true]:text-[#338038]"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)]",
+      "lift": "hover:-translate-y-1 transition-transform duration-300"
+    },
+    "gradients": {
+      "hero_overlay": "bg-gradient-to-b from-[#338038]/10 to-transparent",
+      "text_highlight": "text-transparent bg-clip-text bg-gradient-to-r from-[#338038] to-[#4ADE80]"
+    },
+    "textures": {
+      "noise": "Use a subtle SVG noise overlay at 2-3% opacity on solid green backgrounds to prevent flatness."
+    }
+  },
+  "media": {
+    "image_urls": {
+      "students": [
+        "https://images.pexels.com/photos/7683898/pexels-photo-7683898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/7683872/pexels-photo-7683872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      ],
+      "campus": [
+        "https://images.unsplash.com/photo-1764058415544-6c5bd4659a88?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwYXJjaGl0ZWN0dXJlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzcxNjIzMzAxfDA&ixlib=rb-4.1.0&q=85",
+        "https://images.unsplash.com/photo-1762972922113-878e5223711f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwYXJjaGl0ZWN0dXJlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzcxNjIzMzAxfDA&ixlib=rb-4.1.0&q=85"
+      ],
+      "placeholders": {
+        "logo": "https://placehold.co/200x80?text=UniWese&font=sans",
+        "avatar": "https://i.pravatar.cc/150?u=student"
+      }
+    },
+    "icons": "Use 'lucide-react' for all UI icons. Use 'filled' style for active bottom nav states, 'outline' for inactive."
+  },
+  "instructions_to_main_agent": [
+    "1. UPDATE THEME: Go to /app/frontend/src/index.css and update the --primary color variable to '124 43% 35%' (HSL for #338038). Update --radius to '0.75rem'.",
+    "2. MOBILE FIRST: Always verify layouts on mobile width (375px-430px). Use 'hidden md:block' for desktop-only elements.",
+    "3. NAVIGATION: Implement a 'BottomNav' component for the mobile layout containing: Home, Colleges, Applications, Community, Profile.",
+    "4. STUDENT PROFILE: Use the 'Bento Grid' layout for the Student Dashboard to show 'Application Status', 'Upcoming Deadlines', and 'Recommended Colleges'.",
+    "5. COLLEGE CARDS: Design the 'College Directory' using the 'cards.base' style. Include a prominent 'Apply Now' button using 'buttons.primary'.",
+    "6. FORMS: Use 'shadcn/ui' form components but override the styling with 'inputs.base'. Ensure labels are uppercase and bold ('typography.usage.labels').",
+    "7. LOGIN: Recreate the login screen exactly using the green branding and rounded inputs."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': Do not use generic gradients or default blue colors.",
+    "Interaction: Add 'active:scale-95' to all buttons for tactile feedback.",
+    "Empty States: Never leave a list empty. Always show a friendly illustration and a CTA (e.g., 'No applications yet? Start exploring!').",
+    "Data-Test-ID: Add 'data-testid' to all interactive elements for testing."
+  ]
+}
