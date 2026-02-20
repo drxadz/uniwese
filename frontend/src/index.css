@@ -1,70 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
     margin: 0;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
+        --background: 210 20% 98%;
+        --foreground: 210 20% 10%;
         --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
+        --card-foreground: 210 20% 10%;
         --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
+        --popover-foreground: 210 20% 10%;
+        --primary: 124 43% 35%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 20% 96%;
+        --secondary-foreground: 210 20% 10%;
+        --muted: 210 20% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 210 20% 96%;
+        --accent-foreground: 210 20% 10%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 124 43% 35%;
+        --chart-1: 124 43% 35%;
         --chart-2: 173 58% 39%;
         --chart-3: 197 37% 24%;
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
+        --radius: 0.75rem;
     }
     .dark {
-        --background: 0 0% 3.9%;
+        --background: 210 20% 6%;
         --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
+        --card: 210 20% 8%;
         --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
+        --popover: 210 20% 8%;
         --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
+        --primary: 124 43% 45%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 20% 14%;
         --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
+        --muted: 210 20% 14%;
+        --muted-foreground: 215 16% 63%;
+        --accent: 210 20% 14%;
         --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
+        --destructive: 0 62% 30%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
+        --border: 210 20% 18%;
+        --input: 210 20% 18%;
+        --ring: 124 43% 45%;
         --chart-1: 220 70% 50%;
         --chart-2: 160 60% 45%;
         --chart-3: 30 80% 55%;
@@ -86,30 +84,161 @@ code {
     [data-debug-wrapper="true"] {
         display: contents !important;
     }
+}
 
-    [data-debug-wrapper="true"] > * {
-        margin-left: inherit;
-        margin-right: inherit;
-        margin-top: inherit;
-        margin-bottom: inherit;
-        padding-left: inherit;
-        padding-right: inherit;
-        padding-top: inherit;
-        padding-bottom: inherit;
-        column-gap: inherit;
-        row-gap: inherit;
-        gap: inherit;
-        border-left-width: inherit;
-        border-right-width: inherit;
-        border-top-width: inherit;
-        border-bottom-width: inherit;
-        border-left-style: inherit;
-        border-right-style: inherit;
-        border-top-style: inherit;
-        border-bottom-style: inherit;
-        border-left-color: inherit;
-        border-right-color: inherit;
-        border-top-color: inherit;
-        border-bottom-color: inherit;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Mobile safe area padding */
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Bottom navigation safe area */
+.bottom-nav-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+}
+
+/* Hide scrollbar on mobile for horizontal scroll */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* UniWese brand colors utility classes */
+.bg-uniwese-primary {
+    background-color: #338038;
+}
+
+.text-uniwese-primary {
+    color: #338038;
+}
+
+.border-uniwese-primary {
+    border-color: #338038;
+}
+
+/* Card hover effect */
+.card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5;
+}
+
+/* Button press effect */
+.btn-press {
+    @apply active:scale-95 transition-transform duration-100;
+}
+
+/* Input focus ring */
+.input-focus {
+    @apply focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all;
+}
+
+/* Profile completion bar gradient */
+.completion-gradient {
+    background: linear-gradient(90deg, #338038 0%, #4ade80 100%);
+}
+
+/* Hero gradient overlay */
+.hero-gradient {
+    background: linear-gradient(180deg, rgba(51, 128, 56, 0.9) 0%, rgba(51, 128, 56, 0.7) 100%);
+}
+
+/* Glass morphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Skeleton loading animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
     }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton-shimmer {
+    background: linear-gradient(
+        90deg,
+        hsl(var(--muted)) 0%,
+        hsl(var(--muted-foreground) / 0.1) 50%,
+        hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Status badges */
+.status-submitted {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.status-under_review {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-accepted {
+    @apply bg-green-100 text-green-800;
+}
+
+.status-rejected {
+    @apply bg-red-100 text-red-800;
+}
+
+.status-withdrawn {
+    @apply bg-gray-100 text-gray-800;
+}
+
+/* Rating stars */
+.star-filled {
+    @apply text-yellow-400;
+}
+
+.star-empty {
+    @apply text-gray-300;
+}
+
+/* Forum category colors */
+.category-admissions {
+    @apply bg-purple-100 text-purple-800;
+}
+
+.category-visa {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.category-scholarships {
+    @apply bg-green-100 text-green-800;
+}
+
+.category-general {
+    @apply bg-gray-100 text-gray-800;
 }
