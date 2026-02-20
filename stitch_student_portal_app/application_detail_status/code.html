@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Detail Status - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#338038",
+                "background-light": "#f6f8f6",
+                "background-dark": "#151d15",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for cleaner look in web preview */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.1); 
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: rgba(255,255,255,0.1); 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<!-- Mobile Device Container -->
+<div class="w-full max-w-md bg-white dark:bg-[#1a231a] min-h-screen relative flex flex-col shadow-2xl overflow-hidden">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-[#1a231a]/90 backdrop-blur-md border-b border-slate-100 dark:border-white/5">
+<div class="flex items-center justify-between p-4">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-base font-bold text-center flex-1 truncate px-2">Application Status</h1>
+<button class="flex items-center text-primary text-sm font-semibold hover:opacity-80">
+                    Help
+                </button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- University & Program Header -->
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<div class="relative w-20 h-20 shrink-0 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-white/5 bg-white dark:bg-white/5">
+<img alt="University of Delhi Logo" class="w-full h-full object-cover" data-alt="University logo with clean typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgR1EnC3Gk8Dgu1iPLdLGlSWos6VOWSOIrAX12SyIlk7E7lbIQX-I2iz2DrVZ0JDH04s3TDIGpLbYNxCNsXD59qJtenXY41J_hZRAWdtu08ag_3iC8aqns54fKPO1xDJFRIG-19tgkLTqDWNAXnyfnvCyObX_hQ58uFDrTILlO1gdWm2_4brUeZ5BT58zq7_JssonkDQ-QJN4BE4j7TElLMduqY6nyMV5VJzDMdd7Fp0da1RO5c2gNVRMgtAjZu0aVwVwLUjqs3Ijq"/>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<h2 class="text-xl font-bold leading-tight">University of Delhi</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">B.Sc. Computer Science</p>
+<div class="flex mt-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                                In Progress
+                            </span>
+</div>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex justify-between items-end">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Completeness</span>
+<span class="text-sm font-bold text-primary">65%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<div class="h-2 bg-slate-50 dark:bg-black/20 border-y border-slate-100 dark:border-white/5"></div>
+<!-- Requirement Checklist -->
+<div class="flex flex-col py-6">
+<h3 class="px-5 pb-4 text-lg font-bold">Requirement Checklist</h3>
+<div class="flex flex-col px-4 gap-3">
+<!-- Item 1: Completed -->
+<details class="group rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden transition-all duration-300 open:shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none select-none">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Personal Info (1/1)</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pl-[3.25rem] pt-0 border-t border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-white/5">
+<ul class="flex flex-col gap-3 pt-3">
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-300">Profile Details</span>
+<span class="text-primary font-medium text-xs bg-primary/10 px-2 py-0.5 rounded">Verified</span>
+</li>
+</ul>
+</div>
+</details>
+<!-- Item 2: Pending/Attention -->
+<details class="group rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden transition-all duration-300 open:shadow-sm" open="">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none select-none">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 shrink-0 border border-amber-200 dark:border-amber-500/30">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Academic Transcripts (0/2)</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pl-[3.25rem] pt-0 border-t border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-white/5">
+<ul class="flex flex-col gap-3 pt-3">
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-300">10th Grade Marksheet</span>
+<span class="text-amber-600 dark:text-amber-500 font-medium text-xs bg-amber-50 dark:bg-amber-900/30 px-2 py-0.5 rounded flex items-center gap-1">
+                                        Pending
+                                    </span>
+</li>
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-300">12th Grade Marksheet</span>
+<span class="text-red-600 dark:text-red-400 font-medium text-xs bg-red-50 dark:bg-red-900/30 px-2 py-0.5 rounded">Missing</span>
+</li>
+<li class="pt-2">
+<button class="w-full text-xs font-semibold text-primary border border-primary/30 bg-primary/5 hover:bg-primary/10 py-2 rounded-lg transition-colors">
+                                        Upload Missing Files
+                                     </button>
+</li>
+</ul>
+</div>
+</details>
+<!-- Item 3: Completed -->
+<details class="group rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden transition-all duration-300 open:shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none select-none">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-slate-100">English Proficiency</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pl-[3.25rem] pt-0 border-t border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-white/5">
+<ul class="flex flex-col gap-3 pt-3">
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-300">IELTS Score</span>
+<span class="text-primary font-medium text-xs bg-primary/10 px-2 py-0.5 rounded">7.5 Band</span>
+</li>
+</ul>
+</div>
+</details>
+<!-- Item 4: Not Started -->
+<details class="group rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 overflow-hidden transition-all duration-300 open:shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none select-none">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 dark:bg-white/10 text-slate-500 dark:text-slate-400 shrink-0">
+<div class="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-500"></div>
+</div>
+<span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Essays (0/1)</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pl-[3.25rem] pt-0 border-t border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-white/5">
+<ul class="flex flex-col gap-3 pt-3">
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-300">Statement of Purpose</span>
+<span class="text-slate-500 font-medium text-xs bg-slate-100 dark:bg-white/10 px-2 py-0.5 rounded">Not Started</span>
+</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+<div class="h-2 bg-slate-50 dark:bg-black/20 border-y border-slate-100 dark:border-white/5"></div>
+<!-- Timeline Section -->
+<div class="flex flex-col p-5 pb-8">
+<h3 class="text-lg font-bold mb-6">Application History</h3>
+<div class="relative pl-3 border-l-2 border-slate-200 dark:border-white/10 ml-2 space-y-8">
+<!-- Step 1: Current -->
+<div class="relative">
+<div class="absolute -left-[1.35rem] top-1 h-4 w-4 rounded-full bg-primary border-4 border-white dark:border-[#1a231a] shadow-sm"></div>
+<div class="flex flex-col gap-0.5">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Application Review Started</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Oct 12, 2023 • 10:30 AM</p>
+<p class="text-xs text-primary mt-1 font-medium">Current Stage</p>
+</div>
+</div>
+<!-- Step 2: Past -->
+<div class="relative">
+<div class="absolute -left-[1.35rem] top-1 h-4 w-4 rounded-full bg-primary border-4 border-white dark:border-[#1a231a] opacity-60"></div>
+<div class="flex flex-col gap-0.5">
+<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Payment Successful</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Oct 10, 2023 • 04:15 PM</p>
+</div>
+</div>
+<!-- Step 3: Past -->
+<div class="relative">
+<div class="absolute -left-[1.35rem] top-1 h-4 w-4 rounded-full bg-primary border-4 border-white dark:border-[#1a231a] opacity-30"></div>
+<div class="flex flex-col gap-0.5">
+<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Application Drafted</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Oct 01, 2023 • 09:00 AM</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action Bar -->
+<div class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#1a231a] border-t border-slate-200 dark:border-white/5 p-4 pb-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-40">
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-white font-semibold py-3.5 px-4 rounded-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+                    Upload Missing Documents
+                </button>
+<button class="w-full bg-transparent text-slate-600 dark:text-slate-300 font-medium py-2 px-4 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-colors text-sm">
+                    Email Admissions Office
+                </button>
+</div>
+</div>
+</div>
+</body></html>

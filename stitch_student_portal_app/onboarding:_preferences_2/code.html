@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Preferences | UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .ios-slider {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 4px;
+                background: #e2e8f0;
+                border-radius: 2px;
+                outline: none;
+            }
+            .dark .ios-slider {
+                background: #334155;
+            }
+            .ios-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 28px;
+                height: 28px;
+                background: white;
+                border: 1px solid #e2e8f0;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            }
+            .dark .ios-slider::-webkit-slider-thumb {
+                background: #f8fafc;
+                border-color: #475569;
+            }
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col bg-white dark:bg-slate-950 mx-auto max-w-[430px] shadow-2xl overflow-x-hidden">
+<div class="sticky top-0 z-20 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center px-4 h-14 justify-between">
+<button class="text-primary flex items-center gap-1 font-medium transition-opacity active:opacity-50">
+<span class="material-symbols-outlined text-xl">arrow_back_ios</span>
+<span>Back</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Step 2 of 3</span>
+<h1 class="text-sm font-bold">Preferences</h1>
+</div>
+<div class="w-12"></div>
+</div>
+<div class="h-1 w-full bg-slate-100 dark:bg-slate-800">
+<div class="h-full bg-primary" style="width: 66.6%;"></div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-6 pt-8 pb-40">
+<header class="mb-10">
+<h2 class="text-2xl font-bold tracking-tight mb-2">Tailor your journey</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    Select your destination preferences and budget so we can suggest the most relevant programs for you.
+                </p>
+</header>
+<section class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Target Countries</h3>
+<span class="text-xs text-primary font-medium">Clear all</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-primary ring-1 ring-primary/20">
+<div class="flex items-center gap-4">
+<img alt="USA" class="w-8 h-6 object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmM21zVBqxR1_mfk9bz2DClFFjbaadd6rAu1xOo8SrVxlO8YGaVtiLO6mlWKRiyrGkqk-CJMwipa-hW7iiuRlAJ9FQlh-kNOvc6-Y7to8I9ry5j59s9Io1nBDsVkHVQIwqT8NG1p3WWmXOqwa1Kovpt3StgXCQCtPl0Gx26fss9MLDBzqVgfNcdLPlKABIM8Ep9Eb0qMDrONSftHnsbITfbWihuk9-MMOH6u5UGWlzBbmvyqUL4khBiTC5jeQmwXReZ4jsSdLyBOni"/>
+<span class="font-semibold text-slate-900 dark:text-white">United States</span>
+</div>
+<span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-primary ring-1 ring-primary/20">
+<div class="flex items-center gap-4">
+<img alt="UK" class="w-8 h-6 object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ofMRme1qy1eiN7XGJuJUQpfOrnvpqA1wRW21-I3aMAhTOKwfWGz7kf_Q8_ytwwhWW6Gn9H-ALiOdMrzLQOlppSI5a8iMveRCbMtYtPbwWU58CnARRzJ7-diHRz8074A4FvBRwgWjCdEQlM9xAZ4RjaW_YEypDQo-kmJg8-3L9CJj8Tk6WE2132N5aAlF7J4PejhoYHEWQfDLoycxeOe4FSyB_bUyT0LP34kI31xcBtAmvvkA4R4J61pTPsgIVFp8Hkuhp7B296K5"/>
+<span class="font-semibold text-slate-900 dark:text-white">United Kingdom</span>
+</div>
+<span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 active:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="Canada" class="w-8 h-6 object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Xlu3glUChzGyu-UB8FuVnR7cCjvnfBUQTYsV_PDx8oTVTlD2fLrVJ3l-yvuB-VYq5ZUUFMr7w0YraAN2QgO27574JlBAa7RNYOaGurCKz24Jor3Nliwz6R2-2aaPu3umFPhVOzOriSZ7wszn1QF0KDMnPj_Tkr9eWkCpfdZcQtYUwlNzQR-e7jhfgq8hdkvuaSe0JdQTNbaBQYj_UBG4I-QXRJ8AM6ChsHCKYUBKI25ZeF1HPT4wiPlAWN0O7HZmpkOkYddD9cQC"/>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Canada</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 active:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="India" class="w-8 h-6 object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYSBeVZvy5RCOPA5uzn4liy61GBPOYNfcU1RaoQlBCYUXtHVHxzaJb8lXu3u7730gVakY8_EUi6uZ6WWc-0_xuDyzc6hVfHdt27Wjv_pkJYzBUDrxYa3pHgkj-NWLetGIuYULjaXdMa0mN-7KiYxmrDaI4MeEuYqz7kwPYdaRvkSM7Fi3sq0GwtAIjetgNUE29MpQSzivNfLASrXbv5SgcV8snJWaq997KP4YbunRagIbfbZboRrd411PiaFlZm7Img0RUyCUiQRh"/>
+<span class="font-semibold text-slate-700 dark:text-slate-300">India</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 active:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="Germany" class="w-8 h-6 object-cover rounded shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqzyTRhu3DtuiRn6p9wh3bf68YMsl8Rb5HzP1Lm_smE92RI6Eaxf_MGFbQFtYdIs0g01jdis3yJFm8yJBfuaB4Je1Nan7smxcszRIgONxjoa3ftaloS6nR9La8rUwFyqqI5mtrLu6ywmpC6mbS21MMHsqwMyAXSFhsL3cKvmZFbPYU1C95fNAy_z_bSs43xUzCAsaeHVbv_V90IpGkSnanGVdlCK776_nqwFK06TaOBNt2edQI_adnxxf6KJ9IJBGNibEyq3eLc-pJ"/>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Germany</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</div>
+</div>
+</section>
+<section class="mb-10">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Monthly Budget (INR)</h3>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">
+                        ₹45,000 - ₹80,000
+                    </div>
+</div>
+<div class="relative px-2">
+<div class="absolute -top-6 left-0 text-[10px] font-bold text-slate-400">₹10K</div>
+<div class="absolute -top-6 right-0 text-[10px] font-bold text-slate-400">₹2L+</div>
+<div class="relative h-10 flex items-center">
+<div class="absolute h-1 bg-primary left-1/4 right-1/4 rounded-full z-0"></div>
+<input class="ios-slider relative z-10" max="200000" min="10000" step="5000" type="range" value="65000"/>
+</div>
+<div class="flex justify-between mt-4">
+<div class="text-center">
+<span class="block text-xs font-semibold text-slate-900 dark:text-slate-200 tracking-tight">Minimum</span>
+<span class="text-[10px] text-slate-500">₹45,000</span>
+</div>
+<div class="text-center">
+<span class="block text-xs font-semibold text-slate-900 dark:text-slate-200 tracking-tight">Maximum</span>
+<span class="text-[10px] text-slate-500">₹80,000</span>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 flex gap-3">
+<span class="material-symbols-outlined text-blue-500">info</span>
+<p class="text-xs text-blue-700 dark:text-blue-300 leading-normal">
+                        This budget helps us estimate tuition fees and living expenses for your chosen destinations.
+                    </p>
+</div>
+</section>
+</div>
+<div class="fixed bottom-0 left-0 right-0 px-6 pt-4 pb-10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 max-w-[430px] mx-auto z-30">
+<button class="w-full py-4 rounded-2xl bg-primary text-white font-bold text-lg shadow-xl shadow-primary/30 active:scale-[0.98] transition-all">
+                Continue
+            </button>
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full mx-auto mt-6"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>University Events - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#0a66c2", "background-light": "#f6f8f6", "background-card": "#ffffff", "background-dark": "#151d15", "linkedin-blue": "#0a66c2"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#f3f2ef] font-display text-slate-900;
+            }
+        }
+        .ios-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f3f2ef]">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-[#f3f2ef] pb-24">
+<div class="sticky top-0 z-50 flex items-center bg-white px-4 py-3 border-b border-slate-200">
+<button class="flex items-center text-slate-700">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex-1 px-4">
+<div class="bg-slate-100 rounded-md flex items-center px-3 py-1.5">
+<span class="material-symbols-outlined text-slate-500 text-lg mr-2">search</span>
+<span class="text-slate-500 text-sm">Search events...</span>
+</div>
+</div>
+<button class="text-slate-700">
+<span class="material-symbols-outlined text-2xl">share</span>
+</button>
+</div>
+<div class="relative bg-white">
+<div class="h-40 w-full overflow-hidden">
+<img alt="Campus Cover" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdMqPOOKhBEbbqey41DQmz8eb66QCDBHVq7sXtsk1NBJanfUBkvHivB-atT_ROqrqAeYMyORgUwJWsUCnky0a5BngQj5_Rk9xKnA164tDwx1FrduJEzaXfqPpjYjSoP9gtl_ZcFcjwgtRKlFo8SHOCnq98bgnBwvypyNA9CNvbNFCsPFJZHwvYJ8DDlgyz6itzVSZ4xBuMUujRFTrzAQ6XVicvK07JsSUwgdzjYqsCEYR8SFFr_yDWSKctEVNGpR5DXgNtqSq9ocX"/>
+</div>
+<div class="px-4 -mt-12 relative pb-4">
+<div class="bg-white p-1 inline-block rounded-lg shadow-md mb-3">
+<div class="w-20 h-20 bg-slate-100 rounded-lg flex items-center justify-center overflow-hidden">
+<img alt="Uni Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS8ZYAtuQBO31xJG2-8MoO0g8KaswMUbym-9GUOl6ylDogPVv0JV_UpZzkCKLzO_3eIvvGgcuob0UM35nfMkBwIyi7cZjgX1-Lap1VdnQdc3DR7n-G1CElSyTjub9jplS0ca9GyvOQJMtO6N_y01UKWCpi9RQNJZYpkuXQy4LLgIAKUfc2ea-hQlgwGpSUvdCmnwxk4lz5tMtdjXK5hLHVhYzUsfGqBbIq6iiLaeEA4c4-Y83tweaUyDWe0fQOCNRTYTotSROHAgmC"/>
+</div>
+</div>
+<div class="flex flex-col">
+<h1 class="text-2xl font-bold text-slate-900">Stanford University</h1>
+<p class="text-slate-600 text-sm mt-0.5">Stanford, California, United States</p>
+</div>
+</div>
+</div>
+<div class="flex border-b border-slate-200 bg-white mt-2 px-4 overflow-x-auto hide-scrollbar sticky top-[60px] z-40">
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">About</button>
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">Requirements</button>
+<button class="py-3 px-4 text-primary border-b-2 border-primary font-semibold text-sm whitespace-nowrap">Events</button>
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">Campus Life</button>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<section class="bg-white p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Upcoming Events</h3>
+<button class="text-primary text-sm font-semibold">View Calendar</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="border border-slate-200 rounded-xl p-4 hover:bg-slate-50 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-blue-50 text-primary text-xs font-bold px-2 py-1 rounded">Webinar</span>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Online
+                            </span>
+</div>
+<h4 class="font-bold text-slate-900 text-base mb-1">Fall 2024 Admissions Q&amp;A</h4>
+<div class="flex items-center gap-2 text-slate-600 text-sm mb-3">
+<span class="material-symbols-outlined text-lg">event</span>
+<span>Oct 15, 10:00 AM PST</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Speaker" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMO-6Ur2Yp1da1gHRctuFy8M7QqVoDNzmMZI4OUAPmmjeadwKo5sprL6vBdbGKjrQCVAflAyTtcVaWFawZwLbGXLklfbh1mCmMAprNI3SFVGVm5nwf6TKyYxmNLdXs2zXjmIO7-aJ4tuF8io6ockFgVFLhJxEUKJpGtcUJLsRNPkbstzR5BDAx8IUQK6hzlz4BlAzpEjasjAIL3MZ0JIBNlc76YWU7tU56f6PWqfK-MtVLI9Y3NueLwGU0Ych0DkxctWyycMQa-lMh"/>
+</div>
+<span class="text-xs text-slate-500">Sarah Jenkins, Senior Admissions Officer</span>
+</div>
+<button class="w-full border border-primary text-primary font-semibold py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Register</button>
+</div>
+<div class="border border-slate-200 rounded-xl p-4 hover:bg-slate-50 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-green-50 text-green-700 text-xs font-bold px-2 py-1 rounded">Info Session</span>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Online
+                            </span>
+</div>
+<h4 class="font-bold text-slate-900 text-base mb-1">Scholarships for Indian Students</h4>
+<div class="flex items-center gap-2 text-slate-600 text-sm mb-3">
+<span class="material-symbols-outlined text-lg">event</span>
+<span>Oct 22, 06:00 PM IST</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-[10px] font-bold text-slate-500">DR</div>
+<span class="text-xs text-slate-500">Dr. Rahul Sharma, Financial Aid Director</span>
+</div>
+<button class="w-full bg-primary text-white font-semibold py-2 rounded-full text-sm hover:bg-blue-700 transition-colors">Join Live</button>
+</div>
+<div class="border border-slate-200 rounded-xl p-4 hover:bg-slate-50 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-orange-50 text-orange-700 text-xs font-bold px-2 py-1 rounded">Campus Tour</span>
+<span class="text-slate-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> On Campus
+                            </span>
+</div>
+<h4 class="font-bold text-slate-900 text-base mb-1">Engineering Facilities Tour</h4>
+<div class="flex items-center gap-2 text-slate-600 text-sm mb-3">
+<span class="material-symbols-outlined text-lg">event</span>
+<span>Nov 05, 02:00 PM PST</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-[10px] font-bold text-slate-500">SA</div>
+<span class="text-xs text-slate-500">Student Ambassador Team</span>
+</div>
+<button class="w-full border border-primary text-primary font-semibold py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Request Invite</button>
+</div>
+</div>
+</section>
+<section class="bg-white p-4 pb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Video Archive</h3>
+<button class="text-slate-500 text-sm">See all</button>
+</div>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-4 px-4">
+<div class="flex-shrink-0 w-64">
+<div class="aspect-video bg-slate-100 rounded-lg overflow-hidden mb-2 relative group">
+<img alt="Archive 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBTFj4YZoQIy3OW7MtZWzCWBMAPRL4u6wiOv-dFyu_jMCBua7PVghh_J7Me9oP_ooEbR6CVoucCYJTfZJ22_l1AzdSuhlSKf0LnLPLkAwz39EzO1DBQeOXjZk-m0czu4f2koyLfsOsjsjFfU7KzBamBoIxD6JiENVVi_HIGMQqioTM5NWuuo5MwaTjfkSr_mTu4k-bM-roQGNfDFJMQySFOZYjmrp8Sj2EpSPNpvhPun3BFUceEpeUqAEId3QQrIXbO0X66N2DGUsq"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center pl-1 shadow-lg">
+<span class="material-symbols-outlined text-primary text-2xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded">45:20</div>
+</div>
+<p class="text-sm font-semibold text-slate-900 line-clamp-2">Understanding the Common App: A Guide for Int'l Students</p>
+<p class="text-xs text-slate-500 mt-1">Recorded 2 weeks ago</p>
+</div>
+<div class="flex-shrink-0 w-64">
+<div class="aspect-video bg-slate-100 rounded-lg overflow-hidden mb-2 relative group">
+<img alt="Archive 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiqnGYoo_EqGhjnPIuTiTX6Aw5pnwSGdShfpqgJZvoRiqYyBXrLRA3AGTP6TKaQO9-ZGxinqpoXb03gzoY79JSEr6zYvZI3FlpzR3tEWZEsDGzbRyNjHgJrGqk-p2PfVXRRDECJ651fzHjw3a29B2Wl8xvS5cyM-sFIqpjQlC61V6FvGLb21RHR_aKB4pVOWhe-mmYTNBApck8feNZHm5l5-J-i1VURE5S-KE8Nsy1rmbt6hdgy2_Q3vTxFCyUHU8N-9LHPBxRUTYp"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center pl-1 shadow-lg">
+<span class="material-symbols-outlined text-primary text-2xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded">32:15</div>
+</div>
+<p class="text-sm font-semibold text-slate-900 line-clamp-2">Student Life Panel: Clubs &amp; Organizations</p>
+<p class="text-xs text-slate-500 mt-1">Recorded 1 month ago</p>
+</div>
+</div>
+</section>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-white border-t border-slate-200 flex justify-between px-6 py-2 z-50 pb-5">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">home</span>
+<span class="text-[10px] text-slate-500 mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">group</span>
+<span class="text-[10px] text-slate-500 mt-1">Network</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+<span class="text-[10px] text-slate-500 mt-1">Notifications</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">mail</span>
+<span class="text-[10px] text-slate-500 mt-1">Messages</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMO-6Ur2Yp1da1gHRctuFy8M7QqVoDNzmMZI4OUAPmmjeadwKo5sprL6vBdbGKjrQCVAflAyTtcVaWFawZwLbGXLklfbh1mCmMAprNI3SFVGVm5nwf6TKyYxmNLdXs2zXjmIO7-aJ4tuF8io6ockFgVFLhJxEUKJpGtcUJLsRNPkbstzR5BDAx8IUQK6hzlz4BlAzpEjasjAIL3MZ0JIBNlc76YWU7tU56f6PWqfK-MtVLI9Y3NueLwGU0Ych0DkxctWyycMQa-lMh"/>
+</div>
+<span class="text-[10px] text-slate-500 mt-1">Profile</span>
+</div>
+</nav>
+<div class="fixed bottom-1 left-0 right-0 max-w-[430px] mx-auto flex justify-center pointer-events-none z-[60]">
+<div class="w-32 h-1.5 bg-slate-300 rounded-full"></div>
+</div>
+</div>
+
+</body></html>

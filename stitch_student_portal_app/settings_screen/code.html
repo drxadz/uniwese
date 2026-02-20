@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#338038",
+                        "primary-light": "#eaf0eb",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#151d15",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e261e",
+                        "text-main": "#111827",
+                        "text-muted": "#6B7280",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-surface-light dark:bg-surface-dark shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-surface-light/80 dark:bg-surface-dark/80 px-4 py-3 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-text-main dark:text-white">Settings</h1>
+<div class="size-10"></div> <!-- Spacer for visual balance -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 pb-24">
+<!-- Section: Account Settings -->
+<section class="mt-6">
+<h3 class="px-5 pb-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Account Settings</h3>
+<div class="flex flex-col">
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-medium text-text-main dark:text-white">Email Address</p>
+<p class="text-xs text-text-muted">student@uniwese.in</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Password &amp; Security</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Profile Privacy</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section: Notifications -->
+<section class="mt-8">
+<h3 class="px-5 pb-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Notifications</h3>
+<div class="flex flex-col">
+<!-- Item -->
+<div class="flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Push Notifications</p>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/20 dark:border-gray-600 dark:bg-gray-700"></div>
+</label>
+</div>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">mark_email_read</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Email Digests</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section: Preferences -->
+<section class="mt-8">
+<h3 class="px-5 pb-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Preferences</h3>
+<div class="flex flex-col">
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-medium text-text-main dark:text-white">Language</p>
+<p class="text-xs text-text-muted">English (India)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-medium text-text-main dark:text-white">App Theme</p>
+<p class="text-xs text-text-muted">Light</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section: Support & Legal -->
+<section class="mt-8">
+<h3 class="px-5 pb-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Support &amp; Legal</h3>
+<div class="flex flex-col">
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Help Center</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">description</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Terms of Service</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Divider -->
+<div class="ml-[76px] h-px bg-gray-100 dark:bg-gray-800"></div>
+<!-- Item -->
+<button class="group flex w-full items-center justify-between bg-surface-light dark:bg-surface-dark px-5 py-4 transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:text-primary-light">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<p class="text-sm font-medium text-text-main dark:text-white">Privacy Policy</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Logout Section -->
+<div class="mt-10 px-5 pb-8">
+<button class="w-full rounded-xl border border-red-200 bg-red-50 py-3.5 text-center text-sm font-semibold text-red-600 transition-colors hover:bg-red-100 dark:border-red-900/50 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30">
+                    Log Out
+                </button>
+<p class="mt-4 text-center text-xs text-text-muted">
+                    UniWese v1.2.4 (Build 302)<br/>
+                    Made with ❤️ in India
+                </p>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 z-50 flex w-full max-w-md items-center justify-between border-t border-gray-100 bg-surface-light/95 px-2 pb-5 pt-3 backdrop-blur dark:border-gray-800 dark:bg-surface-dark/95">
+<a class="group flex flex-1 flex-col items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-2xl text-text-muted transition-colors group-hover:text-primary">home</span>
+<span class="text-[10px] font-medium text-text-muted transition-colors group-hover:text-primary">Home</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-2xl text-text-muted transition-colors group-hover:text-primary">groups</span>
+<span class="text-[10px] font-medium text-text-muted transition-colors group-hover:text-primary">Network</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-2xl text-text-muted transition-colors group-hover:text-primary">notifications</span>
+<span class="text-[10px] font-medium text-text-muted transition-colors group-hover:text-primary">Notifications</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-2xl text-text-muted transition-colors group-hover:text-primary">chat</span>
+<span class="text-[10px] font-medium text-text-muted transition-colors group-hover:text-primary">Messages</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-2xl font-bold text-primary">person</span>
+<span class="text-[10px] font-medium text-primary">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

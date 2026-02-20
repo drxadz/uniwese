@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Illustrative Student Login - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a66c2;
+        }
+        .bottom-sheet {
+            box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.1), 0 -8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .illustration-gradient {
+            background: linear-gradient(180deg, rgba(10, 102, 194, 0.8) 0%, rgba(10, 102, 194, 1) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased font-display">
+<div class="relative flex h-screen w-full max-w-[430px] mx-auto flex-col overflow-hidden bg-primary">
+<div class="relative flex-1 flex flex-col items-center justify-start pt-8 pb-32">
+<div class="absolute inset-0 z-0">
+<img alt="Students collaborating" class="w-full h-full object-cover opacity-60 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlLQSPVdMXsOwO5UK9iLiK1TUQuuy-Zsr-nnIDdqA3A0nZ8FGDJ8fvuIh-wx0FRnrDVVAsBU_NOI12yFjx4TQ6fUxK1z5Vf7i7p5SSPU7iAw5UQDwteftH-6_Z2ZiyepDfSKjxD3uyxUo14RzPaWlR5ty25PgmOYzD7eF2kNbKp0lmWSwlyDnHk8ugbY9oh3iBhLVj_n9mtJ1-lh1SvIVP-IPKW943QooO6c_bUH1rrkUhUPlV2jhVLfvpsxPte7MEFBVGaXOM5cgK"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/40 to-primary"></div>
+</div>
+<div class="relative z-10 px-8 text-center pt-12">
+<h1 class="text-white text-3xl font-bold tracking-tight mb-2">UniWese</h1>
+<p class="text-white/90 text-lg font-medium">Unlock Your Global Future</p>
+<p class="text-white/70 text-sm mt-2 max-w-[280px] mx-auto">Connect with mentors and universities across the globe from India.</p>
+</div>
+</div>
+<div class="bottom-sheet relative z-20 bg-white rounded-t-[2.5rem] flex flex-col px-8 pt-8 pb-4">
+<div class="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1.5 bg-slate-200 rounded-full"></div>
+<div class="mb-6 mt-2">
+<h2 class="text-2xl font-bold text-slate-900">Welcome Back</h2>
+<p class="text-slate-500 text-sm">Please log in to your account</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="space-y-1">
+<label class="text-slate-700 text-xs font-bold uppercase tracking-wider ml-1">Email</label>
+<input class="w-full rounded-xl border-slate-200 bg-slate-50 h-14 px-4 text-base focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-400" placeholder="name@university.edu" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="text-slate-700 text-xs font-bold uppercase tracking-wider ml-1">Password</label>
+<div class="relative flex items-center">
+<input class="w-full rounded-xl border-slate-200 bg-slate-50 h-14 px-4 pr-12 text-base focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 text-slate-400">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end">
+<a class="text-primary text-sm font-semibold" href="#">Forgot Password?</a>
+</div>
+<button class="w-full bg-primary text-white font-bold h-14 rounded-xl shadow-lg shadow-primary/30 active:scale-[0.98] transition-all">
+                    Log In
+                </button>
+<div class="relative flex items-center my-2">
+<div class="flex-1 border-t border-slate-100"></div>
+<span class="px-4 text-slate-400 text-xs font-medium uppercase tracking-widest">or</span>
+<div class="flex-1 border-t border-slate-100"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 border border-slate-200 h-12 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 active:scale-[0.98] transition-all">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9dMMTsWZV9k1B84fYE1hstsGAIEUAMrlVwaNjwHFd3_85jv-4_7xi1AZvRiiphULxhkOq7ZOSHi5cz6azvCfOzf3QJxtpuIygyiID0roE5iBS8UNwhJDYHnBpJHrYXwHQJibthMQAH0UweBxw2XTlDn9vkp4oBbUqtqrxdhFqWCWDaH4sZRIZLMqcAZ8wdOxNLbJDPDvBqPEzHa3lrQT5H4gayp0S9kBL-Xlk8cA5RYQ_HjXb_2yCAuHFwvze9ZiLU2iZK6IYrOjo"/>
+<span class="text-sm">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 border border-slate-200 h-12 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 active:scale-[0.98] transition-all">
+<svg class="w-5 h-5 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+</svg>
+<span class="text-sm">LinkedIn</span>
+</button>
+</div>
+</div>
+<div class="mt-8 pb-4 text-center">
+<p class="text-slate-500 text-sm">
+                    New to UniWese? 
+                    <a class="text-primary font-bold hover:underline" href="#">Join now</a>
+</p>
+</div>
+<div class="flex justify-center pt-2">
+<div class="w-32 h-1.5 bg-slate-100 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

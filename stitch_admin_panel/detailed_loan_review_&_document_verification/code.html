@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loan Review Dashboard - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics in dense UI */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 flex flex-col h-screen overflow-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 shrink-0 z-20">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">UniWese Admin</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-semibold bg-primary/10 px-3 py-1.5 rounded-full" href="#">Loan Requests</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="#">Users</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium transition-colors" href="#">Settings</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-slate-100 placeholder-slate-400" placeholder="Search application ID..."/>
+</div>
+<button class="relative p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<div class="size-9 bg-slate-200 dark:bg-slate-700 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-800 shadow-sm" data-alt="User profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNBYc5xOYmHRW0sej9Y8Cy3TT9suhPG82ptBYElpP7kVhuxVakZXdc3E4bERUWsspjshN8y-lZY_ImtllXd9YvvveRKzqo_ENrGwANuoFFAeHrTLEtNQqc--Hs-tM4miHj3e5dolEYCMMkLwKHgeZ4fAZB23oeXmWcTkYjKrekJ2Z4kge09kPRgDEyfty1nuIzkojxC28_sQkRV18S8fbZUB4W9BRRMY5bdqaosnD79SDPK4ZDlrJ0Md-299Wyur8ncKG4f3KiFfI');"></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: Documents -->
+<aside class="w-80 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0 overflow-y-auto z-10">
+<div class="p-5 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-start justify-between mb-2">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">Alex Rivera</h1>
+<span class="inline-flex items-center rounded-full bg-amber-50 dark:bg-amber-900/30 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
+                        Under Review
+                    </span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-mono">Loan #LN-8832</p>
+</div>
+<div class="flex-1 p-4 space-y-6">
+<!-- Document Group: Identity -->
+<div>
+<h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Identity Verification</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-primary/5 border border-primary/20 text-left group transition-all">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-white dark:bg-slate-800 rounded text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-primary">Passport.pdf</p>
+<p class="text-xs text-slate-500">Verified • 2MB</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-500 text-[18px]">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Document Group: Financial -->
+<div>
+<h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Financial Documents</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-700 text-left group transition-all">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-slate-100 dark:bg-slate-800 rounded text-slate-500 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-primary">Chase_Stmt_Oct.pdf</p>
+<p class="text-xs text-slate-500">Pending Review</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-[18px]">schedule</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-700 text-left group transition-all">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-slate-100 dark:bg-slate-800 rounded text-slate-500 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">family_star</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-primary">Co-signer Income</p>
+<p class="text-xs text-slate-500">Pending Review</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 text-[18px]">schedule</span>
+</button>
+</div>
+</div>
+<!-- Document Group: Academic -->
+<div>
+<h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Academic Records</h3>
+<div class="space-y-1">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-700 text-left group transition-all">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-slate-100 dark:bg-slate-800 rounded text-slate-500 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white group-hover:text-primary">Offer_Letter.pdf</p>
+<p class="text-xs text-slate-500">Unopened</p>
+</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 mt-auto bg-slate-50 dark:bg-slate-900/50">
+<div class="text-xs font-medium text-slate-500 mb-2">Review Progress</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 25%"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-xs text-slate-400">1 of 4 verified</span>
+<span class="text-xs text-primary font-medium">25%</span>
+</div>
+</div>
+</aside>
+<!-- Center: Document Viewer & Logs -->
+<section class="flex-1 flex flex-col bg-slate-100 dark:bg-[#0d131a] relative overflow-hidden">
+<!-- Viewer Toolbar -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1 bg-white dark:bg-slate-800 p-1.5 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700">
+<button class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300" title="Zoom Out">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<span class="text-xs font-mono font-medium text-slate-600 dark:text-slate-300 w-12 text-center">100%</span>
+<div class="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300" title="Zoom In">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<div class="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300" title="Rotate Left">
+<span class="material-symbols-outlined text-[20px]">rotate_left</span>
+</button>
+<button class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300" title="Rotate Right">
+<span class="material-symbols-outlined text-[20px]">rotate_right</span>
+</button>
+<div class="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 text-primary" title="Open in New Tab">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+</button>
+</div>
+<!-- Document Canvas -->
+<div class="flex-1 overflow-auto flex items-center justify-center p-8">
+<div class="bg-white shadow-2xl w-full max-w-[800px] aspect-[1/1.4] relative rounded-sm overflow-hidden border border-slate-200 dark:border-slate-700">
+<!-- Placeholder for PDF Content -->
+<div class="absolute inset-0 bg-slate-50 flex flex-col p-12 pointer-events-none select-none">
+<div class="w-full flex justify-between items-start mb-8 opacity-60">
+<div class="w-16 h-16 bg-slate-200 rounded-full"></div>
+<div class="text-right">
+<div class="h-4 w-32 bg-slate-300 rounded mb-2 ml-auto"></div>
+<div class="h-3 w-48 bg-slate-200 rounded ml-auto"></div>
+</div>
+</div>
+<div class="space-y-4 opacity-50">
+<div class="h-6 w-1/3 bg-slate-300 rounded mb-6"></div>
+<div class="h-3 w-full bg-slate-200 rounded"></div>
+<div class="h-3 w-full bg-slate-200 rounded"></div>
+<div class="h-3 w-5/6 bg-slate-200 rounded"></div>
+<div class="h-3 w-full bg-slate-200 rounded"></div>
+<div class="h-3 w-4/5 bg-slate-200 rounded"></div>
+</div>
+<div class="mt-12 opacity-50">
+<div class="grid grid-cols-2 gap-4">
+<div class="h-24 bg-slate-100 border border-slate-200 rounded"></div>
+<div class="h-24 bg-slate-100 border border-slate-200 rounded"></div>
+<div class="h-24 bg-slate-100 border border-slate-200 rounded"></div>
+<div class="h-24 bg-slate-100 border border-slate-200 rounded"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/5">
+<div class="text-slate-400 font-bold text-4xl rotate-[-30deg] border-4 border-slate-300 p-4 rounded-xl opacity-30 uppercase tracking-widest">
+                                 Confidential
+                             </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Panel: Logs & Notes -->
+<div class="h-72 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex flex-col shrink-0">
+<div class="flex items-center px-4 border-b border-slate-200 dark:border-slate-800">
+<button class="px-4 py-3 text-sm font-medium border-b-2 border-primary text-primary">
+                        Admin Notes
+                    </button>
+<button class="px-4 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 border-b-2 border-transparent hover:border-slate-300 transition-colors">
+                        Communication Log <span class="ml-1 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<button class="px-4 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 border-b-2 border-transparent hover:border-slate-300 transition-colors">
+                        Verification Checklist
+                    </button>
+</div>
+<div class="flex-1 p-4 overflow-y-auto">
+<!-- Admin Notes Tab Content -->
+<div class="flex gap-6 h-full">
+<div class="flex-1 space-y-3">
+<textarea class="w-full h-full resize-none rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Type internal notes regarding this application here..."></textarea>
+</div>
+<div class="w-1/3 border-l border-slate-100 dark:border-slate-800 pl-6 flex flex-col">
+<h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Recent Activity</h4>
+<ul class="space-y-4 overflow-y-auto pr-2">
+<li class="flex gap-3 text-sm">
+<div class="mt-1 size-2 rounded-full bg-blue-500 shrink-0"></div>
+<div>
+<p class="text-slate-900 dark:text-slate-200">System sent receipt email</p>
+<p class="text-xs text-slate-400">Oct 12, 10:00 AM</p>
+</div>
+</li>
+<li class="flex gap-3 text-sm">
+<div class="mt-1 size-2 rounded-full bg-orange-400 shrink-0"></div>
+<div>
+<p class="text-slate-900 dark:text-slate-200">Alex called re: co-signer</p>
+<p class="text-xs text-slate-400">Oct 11, 04:30 PM • Logged by Sarah J.</p>
+</div>
+</li>
+<li class="flex gap-3 text-sm">
+<div class="mt-1 size-2 rounded-full bg-slate-300 shrink-0"></div>
+<div>
+<p class="text-slate-900 dark:text-slate-200">Application submitted</p>
+<p class="text-xs text-slate-400">Oct 10, 09:15 AM</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: Summary & Actions -->
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 flex flex-col shrink-0 overflow-y-auto z-20">
+<div class="p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Loan Terms</h3>
+<div class="space-y-4">
+<div class="bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-100 dark:border-slate-700">
+<p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Requested Amount</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">$45,000</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-slate-50 dark:bg-slate-800 rounded-lg p-3 border border-slate-100 dark:border-slate-700">
+<p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Interest</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">4.5% <span class="text-xs font-normal text-slate-500">Fixed</span></p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800 rounded-lg p-3 border border-slate-100 dark:border-slate-700">
+<p class="text-xs text-slate-500 uppercase tracking-wide font-semibold mb-1">Duration</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">10 Yrs</p>
+</div>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800/30">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white mb-1">Auto-Approval Check</p>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    Credit score meets threshold. Debt-to-income ratio is slightly above average (32%).
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="my-6 border-t border-slate-200 dark:border-slate-800"></div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Action</h3>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg shadow-sm transition-colors focus:ring-4 focus:ring-blue-500/30">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+                        Approve Loan
+                    </button>
+<button class="w-full flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold py-3 px-4 rounded-lg border border-slate-300 dark:border-slate-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                        Request Further Info
+                    </button>
+<button class="w-full flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-600 font-semibold py-3 px-4 rounded-lg border border-red-200 dark:border-red-900/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+                        Reject with Reason
+                    </button>
+</div>
+</div>
+<div class="mt-auto p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-xs">
+                        JD
+                    </div>
+<div>
+<p class="text-xs font-semibold text-slate-900 dark:text-white">Assigned Reviewer</p>
+<p class="text-xs text-slate-500">John Doe • Senior Analyst</p>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

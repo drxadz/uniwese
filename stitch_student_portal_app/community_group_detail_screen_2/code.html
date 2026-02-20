@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - Community Group Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#338038",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#151d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative min-h-screen w-full flex flex-col max-w-md mx-auto bg-white dark:bg-[#1e261e] shadow-2xl overflow-hidden">
+<!-- Sticky Header (Transparent to Solid on scroll logic would be JS, here we assume solid for clarity or initial state) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-white/90 dark:bg-[#1e261e]/90 backdrop-blur-md border-b border-slate-100 dark:border-white/10 max-w-md mx-auto w-full">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-slate-200 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex-1 text-center font-bold text-sm opacity-0 pointer-events-none transition-opacity">Stanford Applicants</div>
+<button class="p-2 -mr-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-slate-200 transition-colors">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</header>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 pb-24 pt-14">
+<!-- Hero / Cover Section -->
+<div class="relative w-full h-48 bg-slate-200 dark:bg-slate-800">
+<img alt="University campus building with green lawn" class="w-full h-full object-cover" data-alt="University campus building with green lawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkFZWP5o3hJdgP2IiNMaecVjJTUuGnEnjKAc9EzVK0OT8OrUhfzlC78ypRltRA9gppX9e49-Aacjw51sIK7OX4_a42BqPQSwCuYMiDezJAJdlpMd354YKuutp6jNDfAP-MI1qTeaOy1clm4aRKCPJUDnKZKak-02CV9a6lvmFkofGVXm0emHHfDtRmj_xlsO6XFGVJa-zmjHcwrcZbwyMfrH-Q3VBXzX-Od5Rj95aTwO8fXUCnjXFTxpGRgN-riBbvBy_RoEkA6TGS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<!-- Group Identity Overlay -->
+<div class="absolute bottom-0 left-0 w-full p-4 text-white">
+<h1 class="text-2xl font-bold leading-tight shadow-sm">Stanford University Applicants</h1>
+<p class="text-xs font-medium text-slate-200 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">public</span> 
+                        1.2k members • 50 online
+                    </p>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="px-4 py-4 flex items-center justify-between border-b border-slate-100 dark:border-white/5 bg-white dark:bg-[#1e261e]">
+<div class="flex gap-2">
+<button class="flex items-center gap-1.5 px-4 py-2 bg-primary/10 text-primary dark:text-green-400 rounded-full text-sm font-semibold transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined text-[18px] fill">check</span>
+                        Joined
+                    </button>
+<button class="flex items-center gap-1.5 px-4 py-2 bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-slate-300 rounded-full text-sm font-semibold transition-colors hover:bg-slate-200 dark:hover:bg-white/20">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+                        Invite
+                    </button>
+</div>
+<div class="flex -space-x-2">
+<img alt="Member Avatar" class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e261e]" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwwjJBrLQ8zyKfyKb5RDQ6DBv_deGxFmpY5z7TEEjzOUBLAyC6zg-jlSfALH_TgR-9ACpp_h5XcAQxfN0sP5w5mBCqnsQ2tq4bzlAO5boo1j6UfvcNnWJPpsSLQS6r0D4IyA2YwidtwD5XcZeI2WtVl1DbL-hJebClzPPr0dcVy2UOgEtBgpOss0vBL0gc6EvJsG48cO153c2ee7zP543MdXrtHenb_HyVit4mWVTHUPZDKCmAFHIc_u_2gvYYRV1LLKtUJLZBAhEK"/>
+<img alt="Member Avatar" class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e261e]" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmqPfVOk-swhgEVikO17OMndPRV0Hj3PWMtkbgBQnnjzhV1JNbWUy0jJ7ziu7ORBVzI_5lje_9ZB35nu3uXEAYzMK8HjXygFztW1jrwPlBO__3M47CDuDZj43a2Y6EXFdpsFNXMyVEYYo7j30rFvwFKxlC-D7D7pyhP90aVhBt0zNOZj_rhPhNdkoTxbEOYjL-MCIrN7yNb1fyZ7JZR9ad7fNJBO-AT_yTDoTGX-1EV9Fmzg48_Zp2H7UlokNCsnGuWmTAjjwFIr-Z"/>
+<img alt="Member Avatar" class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e261e]" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1lBWX4ir48Q2DS_w2AEUQN4bamApSNdtCmLbgA1s0RsdkdIWwgkOj3XcNsx6ni-5zaZomGmjhbH5Nc0bLbvOQDvtAJtYBR_Dzp0fZ4yD6J21uZRem03hpJi73J0JiYUrm_LGjAkmyoq17kcYxOoHy9coZIxZfZi04cztCQflPHOweCyQ7_ngz5D0kr3pZKVXpZYEidr7AcjcJ7iQQeS5oXOkWj7kOedVxG8y3XYSHvsx2rO6M6daPUDtUAyz3MPRCnEa7QVCRBOEY"/>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#1e261e] bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-500 dark:text-slate-300">+99</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="sticky top-[52px] z-40 bg-white dark:bg-[#1e261e] border-b border-slate-200 dark:border-white/10">
+<div class="flex items-center overflow-x-auto no-scrollbar px-4 gap-6">
+<button class="py-3 text-sm font-semibold text-primary border-b-2 border-primary whitespace-nowrap">Feed</button>
+<button class="py-3 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Members</button>
+<button class="py-3 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Resources</button>
+<button class="py-3 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Events</button>
+<button class="py-3 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 whitespace-nowrap">Media</button>
+</div>
+</div>
+<!-- Feed Content -->
+<div class="bg-background-light dark:bg-black/20 min-h-[500px]">
+<!-- Pinned Post -->
+<div class="bg-white dark:bg-[#1e261e] mb-2 p-4 border-b border-slate-100 dark:border-white/5">
+<div class="flex items-start gap-3">
+<div class="pt-1">
+<span class="material-symbols-outlined text-primary text-[20px] fill">push_pin</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1">Admin • Announcement</p>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Welcome to the Fall 2024 Group! 👋</h3>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+                                Please read the group rules before posting. Check the 'Resources' tab for the latest SOP templates and GRE cutoff data.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Post 1 -->
+<div class="bg-white dark:bg-[#1e261e] mb-2 p-4 border-b border-slate-100 dark:border-white/5">
+<!-- User Header -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<img alt="Aarav P." class="w-10 h-10 rounded-full object-cover" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Yh5NhoKqGXIh-bsnXJ-K29pAjoWDkLgISDTPrcVK0E2FsB0YbyIanLoeqW6cl82ssXmKYapfbCOtQ_jM8dUFU5JwqO9bLHWm_PpZPUYkTUwV86B9HUxQI2VyTXt30Ktgz8yagbFG_dnQZYsL-9uHLMRzdJvBGkxvWB19KlenGjmVC3W4W5Nxb6RHiPKH2Eg1HJtDZ9aYyarwzr80sc7rmL5-TEF4fZJYqu8cz8M4GWj23O9ZiBSdU0CYiZWkZPO5WPQR7_9PZVEK"/>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Aarav Patel</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Computer Science • Fall '24 Aspirant • 2h ago</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="mb-3">
+<h3 class="text-base font-semibold text-slate-900 dark:text-white mb-2">Roommate Essay Template?</h3>
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Hey everyone! Does anyone have a good structure or template for the Stanford roommate essay? I'm struggling with the tone—should it be funny or serious? 
+                            <span class="text-primary font-medium">#Stanford2024 #Essays</span>
+</p>
+</div>
+<!-- Post Actions -->
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex gap-6">
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-xs font-medium">12</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-xs font-medium">32</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<span class="text-xs text-slate-400">124 views</span>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="bg-white dark:bg-[#1e261e] mb-2 p-4 border-b border-slate-100 dark:border-white/5">
+<!-- User Header -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<img alt="Priya S." class="w-10 h-10 rounded-full object-cover" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYQE-lvQdMbQGWGdvDdudbJd3Wy7OzJ13hJU9IYYu_KXzCv_hPvRQEW-1JkImc-7Wgt-737cSYrxiYt62L9ch1lGb-tRj5XehvmVYOcCKQ38iOyNAKINYUef5QXuiJLFqIVWC071K6XZXXYy6UU801yhmRLPUSRm4DDpjeYtnZuxfqIs3k_HQcjLbsrFBRelEzg49g2a24VcOpZIQynXuTVyurZ7CIviZdQy8rAc9ZkgIovSJXnfPtyivbi82u3L2nRAVKrwxLyKRx"/>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Priya Sharma</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">MBA Applicant • 5h ago</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="mb-3">
+<h3 class="text-base font-semibold text-slate-900 dark:text-white mb-2">Just got my interview invite! 🎉</h3>
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                            I can't believe it! For those asking, here are my quick stats:
+                            <br/>• GMAT: 740
+                            <br/>• Work Ex: 4 Years (Consulting)
+                            <br/>• GPA: 3.8
+                        </p>
+<div class="w-full h-48 bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden relative">
+<img alt="Laptop screen showing email inbox" class="w-full h-full object-cover opacity-90" data-alt="Laptop screen showing email inbox" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCytH6OEN-Gyz1Y1YugbNkuKY1s7XVDtdGKMSKXFGfo6RhnRLGpUeabBlr2blDdhAUNHI5sKtN2qI7xx0YAMWGzxiuqk4Rhse_Tni8ajWVBkS_Qt6swq9Vx6DRDO8OrLevhEalsXhu-3quqgYqSZ42nv1-64RvQXySgbY68QMfUfOwl8ShnLka-smGEhTTv6Dxjja8NRVQcD74SJuYU8rW98m_JIK0c1hrRZiOQr44ALXOK8fmQhQP_ATZ8ixgnNJOB2tNRxTlyg9Cs"/>
+</div>
+</div>
+<!-- Post Actions -->
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex gap-6">
+<button class="flex items-center gap-1.5 text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] fill">thumb_up</span>
+<span class="text-xs font-medium">150</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-xs font-medium">45</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<span class="text-xs text-slate-400">2.1k views</span>
+</div>
+</div>
+<!-- Post 3 (Text only question) -->
+<div class="bg-white dark:bg-[#1e261e] mb-2 p-4 border-b border-slate-100 dark:border-white/5">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">R</div>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Rahul Verma</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Data Science • 6h ago</p>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Is anyone else having trouble submitting the GRE scores through the portal? It keeps timing out for me.
+                        </p>
+<div class="mt-2 flex gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/10 text-[10px] font-medium text-slate-600 dark:text-slate-400">#TechnicalIssue</span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-slate-100 dark:bg-white/10 text-[10px] font-medium text-slate-600 dark:text-slate-400">#GRE</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex gap-6">
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-xs font-medium">4</span>
+</button>
+<button class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-xs font-medium">8</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Loader -->
+<div class="p-4 bg-white dark:bg-[#1e261e] mb-20">
+<div class="animate-pulse flex space-x-4">
+<div class="rounded-full bg-slate-200 dark:bg-slate-700 h-10 w-10"></div>
+<div class="flex-1 space-y-3 py-1">
+<div class="h-2 bg-slate-200 dark:bg-slate-700 rounded col-span-2 w-1/4"></div>
+<div class="space-y-2">
+<div class="h-2 bg-slate-200 dark:bg-slate-700 rounded w-3/4"></div>
+<div class="h-2 bg-slate-200 dark:bg-slate-700 rounded"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-20 right-4 lg:right-[calc(50%-224px+16px)] w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#2a6b2e] hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary z-50">
+<span class="material-symbols-outlined text-[28px]">edit</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-50 bg-white dark:bg-[#1e261e] border-t border-slate-200 dark:border-white/10 px-6 pb-4 pt-2 flex justify-between items-center text-xs font-medium text-slate-500 dark:text-slate-400">
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+                Home
+            </a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill">groups</span>
+                Network
+            </a>
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">add_box</span>
+                Post
+            </a>
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+                Alerts
+            </a>
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">work</span>
+                Jobs
+            </a>
+</div>
+</div>
+</body></html>

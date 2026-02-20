@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Course Match Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#338038",
+                        "primary-dark": "#2a6e2e",
+                        "background-light": "#f9fbf9",
+                        "background-dark": "#151d15",
+                        "text-main": "#111811",
+                        "text-secondary": "#5f8662",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23338038' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased h-screen overflow-hidden flex flex-col">
+<!-- Header -->
+<div class="flex items-center justify-between px-4 py-3 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800 z-10 shrink-0">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full text-text-main hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold tracking-tight text-center flex-1">AI Course Match</h2>
+<div class="w-10"></div> <!-- Spacer for centering title -->
+</div>
+<!-- Main Content -->
+<div class="flex-1 overflow-y-auto relative flex flex-col">
+<!-- Background Pattern -->
+<div class="absolute inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+<div class="relative z-10 flex flex-col items-center justify-center flex-1 w-full px-6 py-8">
+<!-- Hero Illustration Area -->
+<div class="w-full max-w-[320px] aspect-square relative mb-8">
+<!-- Decorative blurred orbs behind image -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="relative w-full h-full bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center overflow-hidden">
+<!-- Abstract AI Education Graphic -->
+<div class="w-full h-full bg-cover bg-center" data-alt="Students networking in a modern university campus setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaP7gp4DUrWPY8Pzgx_Ag_kb_Pz0I5hKCwIio2UAhAYWm9crDZ0er08v7ugHR_dgVjWLPN4Fc5mrVJj1mpqOk_WjLfF0ADDWEoGXXm4wqVllf33Wgw_NhBVeXXjsU9pOIB4vPhP1tYSQVHPflBNFFGxxMrAudvGT0Fz5DLvYChC2p0O8xlTmpzq2qJr0RC1A67R3wCMn5mA46pxmBIQGs7FsyK71m2xny8q_8DSi77s_2Vi9zxj0OTDpP0ip1r_iSc28DPHk9Ha85Q');">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-80 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[80px] drop-shadow-lg">school</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center text-center max-w-sm mx-auto space-y-4">
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-sm mr-1">auto_awesome</span>
+                    Smart Matching
+                </div>
+<h1 class="text-3xl font-bold text-text-main dark:text-white leading-tight">
+                    Find Your <span class="text-primary">Perfect Fit</span>
+</h1>
+<p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                    Our AI analyzes your profile and preferences to match you with the best universities globally tailored just for you.
+                </p>
+</div>
+<!-- Steps / Features Mini-grid -->
+<div class="grid grid-cols-3 gap-4 w-full max-w-sm mt-10">
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">person_search</span>
+</div>
+<span class="text-[10px] font-medium text-gray-500 uppercase tracking-wide">Analyze</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<span class="text-[10px] font-medium text-gray-500 uppercase tracking-wide">Connect</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<span class="text-[10px] font-medium text-gray-500 uppercase tracking-wide">Apply</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="p-6 pb-2 w-full bg-background-light dark:bg-background-dark z-20">
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-xl shadow-lg shadow-primary/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Start Questionnaire</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark pb-safe">
+<div class="flex justify-around items-end w-full px-2 pt-2 pb-4">
+<!-- Home (Inactive) -->
+<a class="flex flex-1 flex-col items-center justify-center gap-1 group" href="#">
+<div class="p-1 rounded-full group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">home</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Home</span>
+</a>
+<!-- Network (Active/Related Context) -->
+<a class="flex flex-1 flex-col items-center justify-center gap-1 group" href="#">
+<div class="p-1 rounded-full group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">group</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Network</span>
+</a>
+<!-- Center FAB (Optional visual anchor, mimicking active AI state) -->
+<a class="flex flex-col items-center justify-end -mt-8 mb-1" href="#">
+<div class="w-14 h-14 rounded-full bg-primary shadow-lg shadow-primary/40 flex items-center justify-center text-white ring-4 ring-white dark:ring-background-dark transform transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<span class="text-[10px] font-bold text-primary mt-1">AI Match</span>
+</a>
+<!-- Notifications -->
+<a class="flex flex-1 flex-col items-center justify-center gap-1 group" href="#">
+<div class="p-1 rounded-full group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">notifications</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Alerts</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-1 flex-col items-center justify-center gap-1 group" href="#">
+<div class="p-1 rounded-full group-hover:bg-gray-50 dark:group-hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-[24px]">person</span>
+</div>
+<span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Profile</span>
+</a>
+</div>
+</div>
+</body></html>

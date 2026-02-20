@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Password Reset Link Sent - UniWese Super Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a69c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Navbar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-10 py-3 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">UniWese Super Admin</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<a class="hidden sm:flex items-center justify-center text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">
+                Need Help?
+            </a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex items-center justify-center p-4">
+<div class="w-full max-w-md">
+<!-- Success Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-8 flex flex-col items-center text-center">
+<!-- Success Icon -->
+<div class="mb-6 rounded-full bg-emerald-50 dark:bg-emerald-900/20 p-4">
+<span class="material-symbols-outlined text-emerald-500 text-5xl">mark_email_read</span>
+</div>
+<!-- Heading -->
+<h1 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
+                    Check Your Email
+                </h1>
+<!-- Description -->
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8">
+                    We have sent a password reset link to <strong class="text-slate-900 dark:text-slate-200">admin@uniwese.com</strong>. Please check your inbox and spam folder.
+                </p>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-sm shadow-blue-200 dark:shadow-none mb-6">
+                    Back to Login
+                </button>
+<!-- Divider -->
+<div class="w-full h-px bg-slate-100 dark:bg-slate-800 mb-6"></div>
+<!-- Resend Link Section -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm">
+<span class="text-slate-600 dark:text-slate-400 font-medium">Didn't receive the email?</span>
+<a class="font-bold text-primary hover:text-primary/80 inline-flex items-center gap-1 group transition-colors" href="#">
+                        Click to resend
+                        <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Additional Help / Info (Optional context outside card) -->
+<div class="mt-8 text-center">
+<p class="text-xs text-slate-400 dark:text-slate-600">
+                    Protected by UniWese Security Systems
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="py-6 text-center border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="flex flex-wrap items-center justify-center gap-6 mb-2">
+<a class="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="text-slate-400 text-sm">© 2023 UniWese. All rights reserved.</p>
+</footer>
+</body></html>

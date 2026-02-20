@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .material-symbols-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-background-dark shadow-2xl overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img alt="User profile picture thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5tkjbAdk0CiUicRW24pEmYpyLuFypJMl2TKWdKIHKLol9qCbo9jNrEU349bgRkuwkV71TAQrW0sLj5UC5TXegtAFKhIyAElcSDksQUW5Eino9ZJKg0IqgG-8pRnfzRpfQTN7jmLFYohwTdkiyJbb21giBNFRHfIsiRKiS2w1p-UzoXgnaI2XOXAB_Y4e6GH17FmeDQa0znUyDg5WPhC5QIJefqYkhrTqhoLNqDFKOjEjDseARkiibk2ptqd0PkNW8unwZ0PXBiUMw"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Notifications</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">tune</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<section>
+<div class="px-4 py-3 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Today</h2>
+</div>
+<div class="flex items-start gap-3 p-4 bg-primary/5 dark:bg-primary/10 border-b border-slate-100 dark:border-slate-800 relative">
+<div class="absolute left-1 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full"></div>
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-lg bg-white shadow-sm border border-slate-200 flex items-center justify-center overflow-hidden">
+<img alt="University of Toronto campus logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCbXSOwu78PNjqDA4KHs37FJ2br-S7VJFFH9-Umj-0CZ6dojHDA6XJoaoZC8PDRRnv0YB6qfUGeTI1irZXJW1z_XDUFuUmtUldxMDOobxEfW1v93oW8AtWlPz9QNPOqNyL0EqT8DFPGdP5HcRhan4tRR6gKXioldRcgi6H_mMxnMSoAFEeYj2xHc5sGu5Zp08NXIGX-3EfXfFCLtEP2iEbw7tyZOJg825hFVst7SX6grfALOPSASrslUNg0FOph3HcJi548lIXOOJl"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-[14px] material-symbols-fill">school</span>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">University of Toronto</span> updated your application status to <span class="text-primary font-semibold">Under Review</span>.
+                        </p>
+<p class="text-xs text-slate-500">2 hours ago</p>
+</div>
+<button class="text-slate-400"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</div>
+<div class="flex flex-col p-4 bg-primary/5 dark:bg-primary/10 border-b border-slate-100 dark:border-slate-800 relative">
+<div class="absolute left-1 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full"></div>
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img alt="Arjun Mehta profile picture" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCinZnbk2IlnCvB0CxeP2hHLAAanHophKLPEUtMIaTrsP4OwU5OxdiC3zOYbog98kQgUHnqfNi3dG-6IK8TOK9flNpXd2QH_TkshpCUOWLE_Cf2-Xrie0CQI-JH-nQrft4WN2DEuH_FkMByXKVqQVSyrUOPz8IDB3xGnfqpCN7IIZkSbt5WBQA45cTmCVQcIpts8yaqJ2wgDWobXnYSD1VSrNp_bv4pMI-V0rWeYBh_VbfzV6DMp1YoFmZJkjuQd0xiLxtCtBrMdjlO"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-[14px] material-symbols-fill">person_add</span>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">Arjun Mehta</span> wants to connect with you. He is a Senior at IIT Bombay.
+                            </p>
+<p class="text-xs text-slate-500">4 hours ago</p>
+</div>
+</div>
+<div class="flex gap-2 mt-3 ml-15 pl-12">
+<button class="flex-1 bg-primary text-white py-1.5 rounded-full text-sm font-bold transition-opacity hover:opacity-90">Accept</button>
+<button class="flex-1 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 py-1.5 rounded-full text-sm font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Decline</button>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400">calendar_month</span>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">Upcoming Webinar:</span> Master's in CS at NYU starts in 30 minutes.
+                        </p>
+<p class="text-xs text-slate-500">8 hours ago</p>
+<button class="text-primary text-sm font-bold mt-1">Join Meeting</button>
+</div>
+<button class="text-slate-400"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</div>
+</section>
+<section>
+<div class="px-4 py-3 bg-slate-50 dark:bg-slate-900/50">
+<h2 class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Yesterday</h2>
+</div>
+<div class="flex items-start gap-3 p-4 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full flex -space-x-4 overflow-hidden">
+<img alt="Profile visitor 1" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover z-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKqrNMoSuBopbHn5yJb-xAB9936rCrbmsOgvXB-YOy0AvnC5kzYoVVrmQTP79sY0ncYlxVDkQp6HLcZsAwO0Kss_59zRlFKHCX4FOqKg5xAodnN7C9gA3cL3Iwk0gtG3CEApPHwcPEmMURpMeprmDxPkJjDnOb8fbPzY1JJeiiszV3S_qZEokhJgcVQ9a0JLnoejtEDtZzw8U9m9D7JEginj7YfMYLTtrN0bJxhobH9dp5d1ebcLejoU_83eMuqb2sYZuKucU7Lp8L"/>
+<img alt="Profile visitor 2" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfzoksewN3Ub6f9GKt6UaagPIjqF8Lwy-31EYr9B0SGAF2pJKpNcb0ADpJt4zBdlghlF466B5Ui4vfQyfTW6AvmqRY8s2Dcjy0e1iN_5EIcN4fNeKyD4bXJtDSbm772gtXHziMb1ZUAPAnms4bopJDvov6-35Ut8OFaIday0HY8dKfTaobdwqOofF80pEzzQFgFIl1tui4LjtAy8nPW1luvSrB8eXw3iSevmDWNon8Klr7jzwFPTcleX7GEnhed5CwdagrM_KQ51Dh"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-blue-500 text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-[14px] material-symbols-fill">visibility</span>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">Priya Sharma</span> and 4 others viewed your profile yesterday.
+                        </p>
+<p class="text-xs text-slate-500">1 day ago</p>
+</div>
+<button class="text-slate-400"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</div>
+<div class="flex items-start gap-3 p-4 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<img alt="Sarah Johnson profile picture" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANblxE-Lh0U7qpNHiXcgC9lJQVCK_XcZV4PdNk9cIdEcFeM4JgTjVDpUwT56pVLkdxO_4XKNDEeSMOKy_XBK8tHk83ZsJJzm_2HKPd4qK3yWuz0tNikgCmp3OzBpdi4TRvZyz_ocuO68UU0s7nUNH44F2wYn2kAESw38ZSreH6eoidA_s8QPqfxizNmzXFjB0Tkx68iDkA1uPsySyVzU-LvaihIRQFwG5MlFxCcmX8GQ-0gMva541vgSI-PFzNUpReyWNJxvNBMnMk"/>
+<div class="absolute -bottom-1 -right-1 bg-red-500 text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-[14px] material-symbols-fill">favorite</span>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">Sarah Johnson</span> liked your post about "Common App Essay Tips".
+                        </p>
+<p class="text-xs text-slate-500">1 day ago</p>
+</div>
+<div class="shrink-0 w-12 h-12 rounded bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center text-center">
+<span class="text-[8px] font-bold text-primary/60 px-1">ESSAY TIPS</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="sticky bottom-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-1 py-1 flex justify-between items-end safe-area-bottom">
+<a class="flex flex-1 flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Network</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 p-2 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined material-symbols-fill">notifications</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">2</span>
+</div>
+<span class="text-[10px] font-bold">Notifications</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 p-2 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<div class="h-1.5 w-32 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto my-2 mb-4 shrink-0"></div>
+</div>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese Admin - 2FA Verification</title>
+<!-- Fonts and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a69c2",
+                        "primary-hover": "#0857a3",
+                        "background-light": "#f3f4f6",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased h-screen w-full overflow-hidden flex flex-col">
+<!-- Navbar/Header Area (Minimal for Admin Context) -->
+<header class="w-full h-16 flex items-center justify-between px-8 absolute top-0 left-0 z-10">
+<div class="flex items-center gap-2">
+<!-- Logo placeholder -->
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-lg">U</div>
+<span class="font-bold text-lg tracking-tight text-slate-700 dark:text-slate-200">UniWese</span>
+</div>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+            Need Help?
+        </a>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex items-center justify-center p-4 relative">
+<!-- Abstract Background Pattern -->
+<div class="absolute inset-0 z-0 opacity-40 pointer-events-none" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 32px 32px;">
+</div>
+<!-- Verification Card -->
+<div class="relative z-10 w-full max-w-[480px] bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col">
+<!-- Header Section with Icon -->
+<div class="pt-10 px-8 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-blue-50 dark:bg-slate-800 flex items-center justify-center mb-6 ring-4 ring-blue-50/50 dark:ring-slate-700/50">
+<span class="material-symbols-outlined text-4xl text-primary">security</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Verify Your Identity</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs mx-auto">
+                    We've sent a 6-digit code to your registered email <br/>
+<span class="font-medium text-slate-700 dark:text-slate-300">ad***@uniwese.com</span>
+</p>
+</div>
+<!-- Form Section -->
+<div class="p-8 pb-10">
+<div class="flex justify-center gap-3 mb-8">
+<!-- OTP Inputs -->
+<input autocomplete="one-time-code" autofocus="" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+<input autocomplete="one-time-code" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+<input autocomplete="one-time-code" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+<input autocomplete="one-time-code" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+<input autocomplete="one-time-code" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+<input autocomplete="one-time-code" class="w-12 h-14 text-center text-2xl font-semibold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder-transparent" inputmode="numeric" maxlength="1" type="text"/>
+</div>
+<!-- Verify Button -->
+<button class="w-full h-12 bg-primary hover:bg-primary-hover text-white font-semibold rounded-lg shadow-md transition-all duration-200 flex items-center justify-center gap-2 group">
+<span>Verify Code</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<!-- Timer / Resend -->
+<div class="mt-8 flex flex-col items-center gap-3">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                        Didn't receive the code? 
+                        <a class="font-medium text-primary hover:text-primary-hover underline underline-offset-2 transition-colors" href="#">Resend Code</a>
+</p>
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-slate-500">timer</span>
+<span class="text-xs font-mono font-medium text-slate-600 dark:text-slate-300">00:30</span>
+</div>
+</div>
+</div>
+<!-- Footer of Card -->
+<div class="bg-slate-50 dark:bg-slate-900/50 px-8 py-4 border-t border-slate-100 dark:border-slate-700 flex justify-center">
+<a class="text-sm font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+                    Back to Login
+                </a>
+</div>
+</div>
+<!-- Trust/Brand Footer -->
+<div class="absolute bottom-6 left-0 w-full text-center">
+<p class="text-xs text-slate-400 dark:text-slate-500">
+                © 2024 UniWese Admin Panel. All rights reserved.
+            </p>
+</div>
+</main>
+<!-- JS for Focus logic only (Simulated, no actual JS logic added as per constraints, just standard HTML behavior) -->
+<!-- The inputs use standard HTML attributes. To make this fully functional, JS would handle auto-focus jumping. -->
+</body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - Peer Profile Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f8f9fa",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 2px 10px rgba(0, 0, 0, 0.05)',
+                        'card': '0 1px 3px rgba(0,0,0,0.05)',
+                        'widget': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .font-variation-settings-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+        .widget-card {
+            @apply bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-sans min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold">
+            Profile Dashboard
+        </div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto w-full max-w-lg mx-auto pb-24 px-4 pt-6">
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-6 mb-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col items-center">
+<div class="relative group mb-4">
+<div class="h-28 w-28 rounded-full p-[3px] bg-gradient-to-tr from-primary to-blue-300 ring-2 ring-white dark:ring-slate-900">
+<img alt="Portrait of a young male student smiling" class="h-full w-full rounded-full object-cover border-2 border-white dark:border-slate-900 bg-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6UKL-jLQzmcQ0_Ur8yqwwOA52XL6OYFEKL69JyTjzsxIaHHURlGqZOPJAxs8ElppkZOnjJinBT4_goKD0KC518oskIjLL6UDG0LGcEctKrxHMNY6LpTPKDEobK58SPmsXNWhqYaf5JaNrfUIgvhvaghhXt57C6zecCJiExvunVfEQylUbuHEOd1tLgnrP6S5keNJ7mFxl1l1mQGyj3rBDJ7h8-n6UWNEf7HjhAkK_XX93GfDG2Bl3NagpWDYtifX7DSTuQZ_IKht6"/>
+</div>
+<div class="absolute bottom-1 right-1 h-5 w-5 bg-green-500 rounded-full border-[3px] border-white dark:border-slate-900"></div>
+</div>
+<div class="text-center space-y-1 mb-5">
+<h1 class="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">Aarav Sharma</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">Aspiring Computer Science Major | Class of 2025</p>
+<div class="flex items-center justify-center gap-1 text-slate-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>New Delhi, India</span>
+</div>
+</div>
+<div class="flex items-center justify-center gap-3 mb-6 bg-slate-50 dark:bg-slate-800/80 py-2 px-4 rounded-full border border-slate-100 dark:border-slate-700">
+<div class="flex -space-x-2.5 overflow-hidden">
+<img alt="Female connection avatar" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgFPUVVVrhe5cqduQUUZgVMFOOjxnJg5nahrW0dsTAaqglU6Q57-6ljBgOYBoIMg-HHUXh71UrXDM7INmlSJHai6ZTtkCjnmKvrGFVAx7K1If8Ht7c0WB30jLe5bknBaEUUWo_u2Jrg-Ry49lBGxXnRUMuZ8LF7xUl64RPQ7geGN_elJkBjB08LIl_E_QcSobbDyMqGtA81qnXZfLyTluzeS69iEgBvqwhZxG9VG_Z506GmALYcvVzqs8ApWpezG8XuTcE6n_WSe4A"/>
+<img alt="Male connection avatar" class="inline-block h-6 w-6 rounded-full ring-2 ring-white dark:ring-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6R3SykpVA1wnWuAeQtl9aJcfhZNxYays2t_6rjLYe09faftSvz_zYPmYSy9k8V-pq5DipSYlQP3jREXrOE4Om6dz70wxRhMbVGgGdnOUDIsNa-fpGnnYZ1-yLBKM4NBdArL7jgrdqdLIwqj74F5z4i-bRa_rgEY68aaVoJj39ofCc6JTfwMyNDNt6VdnmW7gAfCTzE9affivqfKajAlXvWpCnK7Qh8ESVibbNhPliQauhy2jhlcMIWNkNAgG68S0WHwa-3ofrivTV"/>
+<div class="flex h-6 w-6 items-center justify-center rounded-full ring-2 ring-white dark:ring-slate-900 bg-slate-200 dark:bg-slate-700 text-[8px] font-bold text-slate-600 dark:text-slate-300">
+                            +12
+                        </div>
+</div>
+<span class="text-[10px] font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-tight">Mutual connections</span>
+</div>
+<div class="flex w-full gap-3">
+<button class="flex-1 h-11 bg-primary hover:bg-blue-700 text-white font-semibold text-xs rounded-xl shadow-md shadow-blue-500/10 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px] font-variation-settings-fill">person_add</span>
+                        Connect
+                    </button>
+<button class="flex-1 h-11 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary hover:bg-slate-50 font-semibold text-xs rounded-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px] font-variation-settings-fill">chat</span>
+                        Message
+                    </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="col-span-2 bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<h2 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">About</h2>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-xs leading-5">
+                    Passionate about coding, robotics, and solving real-world problems through technology. Currently focused on mastering Python and Java. 🚀
+                </p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-[18px]">school</span>
+<h2 class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Education</h2>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<img alt="School logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXm5kAvC8UzBzTmHnxCv2xBl84vkblKkoJUqu8g7kjgfqT7h71bfNPVZfGFbhqSlQU3ocJUmIwbyCBSf4uU-T0M0vqINkp846yyK7gOQK_Kg3SVbcxLqW2ybb85V5-mpoeW8CX8GrNoD5_biqUqsHMTCnYCm5YoCbrXgjDjktjttcLoRka5rpz9kJoDenGFZzyEy4CgRoO4yurhK5JMMv23m90wFZsSV1RO6rmSHUvIrhdfcxkFcXEauH6Bw-0wPPXxHEdM8uiC0Zu"/>
+<div>
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-tight">DPS, R.K. Puram</h3>
+<p class="text-[10px] text-slate-500 mt-0.5">HS Diploma</p>
+<p class="text-[9px] text-slate-400">2023 - Pres.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-[18px]">history_edu</span>
+<h2 class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Previous</h2>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<img alt="School logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQuf-Y52NUWV2-DukvHkJY8kVEadYZmRcB7_QUpG-vCXy0dit-80ugYgZoFG7IMurw0pdizUi_RdUwavarUHBqqyPz9hkNzlWFlRVVyYOdPdqi4Ienk2n3IYImNMM5wjJHut59jRJuihG6_3skvq7ku5lDWurocp66zOWzy-loXTB3kYC24qxWd6Ru_8fcfK3-qI5j2ZDTmExAdO-b4ruCuxR-zFKo1XM8MDZKU813oUoiKXxvcGTjcjWUA7TQaH2_P0yz5sQuxerK"/>
+<div>
+<h3 class="text-xs font-bold text-slate-900 dark:text-white leading-tight">St. Columba's</h3>
+<p class="text-[10px] text-slate-500 mt-0.5">Secondary Ed</p>
+<p class="text-[9px] text-slate-400">2010 - 2023</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/10 rounded-2xl p-4 border border-blue-100 dark:border-blue-900/30 flex flex-col justify-between aspect-square">
+<div>
+<span class="text-[9px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">JEE Mains</span>
+<div class="text-2xl font-black text-slate-900 dark:text-white mt-1">98.5%</div>
+</div>
+<span class="text-[10px] text-green-600 font-bold bg-green-100 dark:bg-green-900/40 w-max px-2 py-0.5 rounded-full">Top 2%</span>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between aspect-square">
+<div>
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">SAT Score</span>
+<div class="text-2xl font-black text-slate-900 dark:text-white mt-1">1450</div>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-slate-500 font-medium">
+<span class="material-symbols-outlined text-[14px]">calculate</span> Math: 780
+                </div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between h-24 col-span-1">
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Class 10th</span>
+<div class="flex items-baseline gap-2">
+<span class="text-xl font-black text-slate-900 dark:text-white">96.2%</span>
+<span class="text-[9px] text-slate-400 font-medium uppercase">CBSE</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm col-span-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Skills</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[9px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md font-bold">Python</span>
+<span class="text-[9px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md font-bold">Java</span>
+<span class="text-[9px] px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md font-bold">ML</span>
+</div>
+</div>
+<div class="col-span-2 bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 rounded-lg text-[11px] font-semibold border border-slate-100 dark:border-slate-700">Public Speaking</span>
+<span class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 rounded-lg text-[11px] font-semibold border border-slate-100 dark:border-slate-700">Robotics</span>
+<span class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 rounded-lg text-[11px] font-semibold border border-slate-100 dark:border-slate-700">Leadership</span>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 grid grid-cols-5 items-center px-2 pb-safe pt-1 z-50">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[9px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors group relative" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="absolute -top-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-red-500 text-[8px] font-bold text-white border-2 border-white dark:border-slate-900">2</span>
+</div>
+<span class="text-[9px] font-medium">Network</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors group relative" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500 border border-white dark:border-slate-900"></span>
+</div>
+<span class="text-[9px] font-medium">Notifs</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="text-[9px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] font-variation-settings-fill">person</span>
+<span class="text-[9px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

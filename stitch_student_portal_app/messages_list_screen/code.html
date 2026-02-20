@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative mx-auto min-h-screen max-w-md bg-white dark:bg-slate-900 shadow-xl flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-white/90 dark:bg-slate-900/90 ios-blur px-4 pt-4 pb-2">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight">Messages</h1>
+</div>
+<button class="size-10 rounded-full bg-primary/5 dark:bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 placeholder:text-slate-500" placeholder="Search messages" type="text"/>
+</div>
+</header>
+<!-- Messages List -->
+<main class="flex-1 overflow-y-auto">
+<!-- Chat Item: Unread -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800 relative">
+<div class="relative shrink-0">
+<div class="size-14 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a young male student smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrJ6HDq3tW8pRm4x1C0aakaPAuJePmFtBjL1QjofO-7_wOisx6Bhamr6UCZ0p4mXciOMuT746McP9k3Bh7-kIPwndCBIja2dDhJYeZA8ngWr5uLzu0YjGChkYr_yiCOwdPPbouhS9Uib7DCfrhvxgT7EvpPGmszyBzx22aSSk_K5PuEU6i6hw4wE3nKxGiZ34RnTobTlDifup5AdQhGQdUPo0r89he416CvizgUrg5OHWgA3G3nyTjvJ8iE_Vafn2x9Tjlms8WUev5')"></div>
+<div class="absolute bottom-0 right-0 size-3.5 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-[15px] truncate">Aarav Sharma</h3>
+<span class="text-xs text-primary font-semibold">2m</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-900 dark:text-slate-100 font-medium truncate pr-4">Hey, did you check the new internship portal? The deadline is soon.</p>
+<div class="size-2.5 bg-primary rounded-full shrink-0"></div>
+</div>
+</div>
+</div>
+<!-- Chat Item: Read with Verified Badge -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="size-14 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a professional woman in a suit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAI8PZ7wklAmvie8dNj_U2RhmSsW7QxH0IMAamObXWsnlHMgbROL685aeX9vOuMIx-pux2mB3vtRi4dfveFZ9tmhH3L_tb057J3ledpfSgYRF4tzpn0ppnn81tDNniMB3KrPtqmWanyhBsRlCoko5dUJYaHCyp15oMwI7TER97WvZ97wZzAu01DztTVK3qLM-KwKnG6BpiLzVUQh6CmgAxjNhB-cdSOtDNYVj690iMpEZK54d-A3zCvdUQVCdqU42UfuWf2AN_sFPwc')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<div class="flex items-center gap-1 min-w-0">
+<h3 class="font-semibold text-[15px] truncate">Dr. Meera Iyer</h3>
+<span class="material-symbols-outlined text-[14px] text-primary fill-1">verified</span>
+</div>
+<span class="text-xs text-slate-500">Wed</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">The application deadline for the CS Master's has been extended to Nov 15th.</p>
+</div>
+</div>
+<!-- Chat Item: Group Chat Style -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0 flex items-center justify-center size-14">
+<div class="absolute top-0 right-0 size-9 rounded-full bg-center bg-cover border-2 border-white dark:border-slate-900 z-10" data-alt="Male student avatar small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdYkCudKsxvlqhe-BduNxrVrqRBgRL0VrTkEZxOocpM9F7p73c8MFwONcGpw9vJDZOXhAEIubsRdwvn-bhMc4x-YTkQjRXdEl7tPp9YvfxeBhMfiq2RXuoJ7sn_XqGFw2_gxGwLuonsyjU6MxkO3OXtf5IiovJ7BnK3kaAiEDP4cyG0Pns-0U6mH5rhJZVJaPnqviEYFWgUal5nb_0Havoie6zPmu_pW23WSuwoxkydYVi9bLixCnj-Pdy7c1WTsG1zxLsEieAwq-g')"></div>
+<div class="absolute bottom-0 left-0 size-9 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-600 dark:text-slate-300 border-2 border-white dark:border-slate-900">
+                        +12
+                    </div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-[15px] truncate">Delhi Tech University Hub</h3>
+<span class="text-xs text-slate-500">Tue</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate"><span class="font-medium text-slate-700 dark:text-slate-200">Rohan:</span> Is anyone going to the seminar today at 4?</p>
+</div>
+</div>
+<!-- Chat Item: Unread -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="size-14 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="Profile photo of a male student" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALrFjQFY0f0rVAM91Rls5LnukJk7q5eURuRtfeFI0mUg3oNCLN7o4baKGGKfnWewTsUFR4pUrD2Da_O4HTPKTd0lL_ghNcMnss0AxYJtyh_eWx9xY5nDGPXpxsVcG4XaC9AUcLRIdxV2UedGpAd9oBVaOzCpcSe2ZxVfj21h74EgWvw6uSqANd56KY-FDjJyg8a0ZuVLOlvIny2lzhhJDc2dNbTNpbktqOdWT8slgNK6o9uxmlOE2N-d18mXX_qi78RLKHgmb-iI85')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-[15px] truncate">Ishaan Malhotra</h3>
+<span class="text-xs text-primary font-semibold">1h</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-900 dark:text-slate-100 font-medium truncate pr-4">You: Thanks for the notes, they really helped for the midterms!</p>
+<div class="size-2.5 bg-primary rounded-full shrink-0"></div>
+</div>
+</div>
+</div>
+<!-- Chat Item -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="size-14 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="Professional profile of a female student" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBf0G2rBPmTHcLLW2DKRYu40_c78lHxm5r3fq4KdbCw85cc_iec1HKdIg5tA9Qu0iylkDCK8GOQcmwmnig7K6QpBk-vTfXT6_IAbOaKt5zWOJc6D8Ygko8rrNqyNEBiJy3JBSUiE_E0YY9WnsfTl2jtVTxoBIpaO7xkmPWPhNEot2WaI6t56E4CQBewJh3y95Pwszm8wkifInRfmWykd1C4ZDgXnzMPG-Zs5KZQEJmyv355Jr5gIv7inymzp8YJ0MFMZyXMY6_vCuiK')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="font-semibold text-[15px] truncate">Priya Verma</h3>
+<span class="text-xs text-slate-500">Oct 12</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">Are you free to discuss the group project on Friday evening?</p>
+</div>
+</div>
+<!-- Chat Item: Recruiter/Official -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer border-b border-slate-100 dark:border-slate-800">
+<div class="relative shrink-0">
+<div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary overflow-hidden">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<div class="flex items-center gap-1 min-w-0">
+<h3 class="font-semibold text-[15px] truncate text-primary">UniWese Support</h3>
+</div>
+<span class="text-xs text-slate-500">Oct 10</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate">Welcome to UniWese! Start by exploring the network tab to find mentors.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 z-30 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe-area">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">group</span>
+<span class="text-[10px] font-medium">Network</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">notifications</span>
+<span class="text-[10px] font-medium">Notifications</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px] fill-1">chat_bubble</span>
+<span class="text-[10px] font-bold">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="size-6 rounded-full bg-slate-300 dark:bg-slate-700 bg-center bg-cover" data-alt="User profile thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJFz1RalZbsza5Ugh2Q5EXA5aN4rdU5EOKk2UG2cFy9xtCzIAKJlPK16BzuJm1c_ZOGqMMJN3CCZpthpD4edNfpFvTqkk5Uwm-HWR7hwJ_m8vM8hdhWCYlEdqFY9Fwpb3TQfJ6f0lM-GoMha6E_atkN8yVOWbw0PAOl469fhfc4pf3cxQ_XSKPMAdrpX5ik7h9LgrSeX_De1Z5wt3AUtl8G_-WK3r36kAMDfj07nwrMQlNhNDMT4wc6I8W-21yLSCRmCPncx6PrA-_')"></div>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+<!-- iOS Home Indicator Space -->
+<div class="h-5 w-full"></div>
+</nav>
+<!-- New Message FAB (Floating Action Button) for better mobile UX -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-2xl">chat_add_on</span>
+</button>
+</div>
+</body></html>

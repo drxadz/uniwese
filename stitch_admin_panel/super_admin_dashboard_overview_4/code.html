@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Search &amp; Application Management - UniWese</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#0a69c2",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101922",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem", 
+                    "lg": "0.5rem", 
+                    "xl": "0.75rem", 
+                    "full": "9999px"
+                },
+            },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased overflow-hidden h-screen flex flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 bg-white px-6 py-3 h-16 shrink-0 z-20">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-slate-900">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h2 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">UniWese</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 h-10 w-96 opacity-50 cursor-not-allowed">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-50 border border-slate-200">
+<div class="text-slate-400 flex border-none items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 bg-transparent border-none placeholder:text-slate-400 px-3 text-sm font-normal leading-normal cursor-not-allowed" disabled="" placeholder="Global search..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center size-10 rounded-full hover:bg-slate-100 text-slate-600 transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border border-white"></span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold text-slate-900">Sarah Connor</p>
+<p class="text-xs text-slate-500">Super Admin</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-white shadow-sm group-hover:ring-primary/20 transition-all" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvyDr2XuViket3Sj8AUPqbOTzdqI-RqWk1opISA5TyEfFGI_BDVDa53XbqiaQ_u1rDCPxeb3AmZt-XbVv_Z3Yj2iBA9G3e4yajhDBd8O-9v12DLey-Ftn5wR-xmh5w4YWwHfYJJ0l0zCHMn8G1RautfkUsuK4Uwnn8N_wDcNNBUu8DSr-DFSKHAxHtQkf-cFoctoX32SVIHidkvpTh07gas3D-ToB1dPL8VRrHASNbKEKsDNcLj8b_HgWvVA6gtTWL_tG0P-dZAEI");'></div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<nav class="w-64 bg-white border-r border-slate-200 flex-col justify-between py-6 px-4 hidden lg:flex overflow-y-auto">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-1">
+<p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Main Menu</p>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary group transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] font-medium" style="font-variation-settings: 'FILL' 1;">school</span>
+<p class="text-sm font-semibold">Students</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">apartment</span>
+<p class="text-sm font-medium">Universities</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">description</span>
+</div>
+<p class="text-sm font-medium">Applications</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">request_quote</span>
+<p class="text-sm font-medium">Loan Applications</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">payments</span>
+<p class="text-sm font-medium">Revenue</p>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Management</p>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">supervisor_account</span>
+<p class="text-sm font-medium">Users &amp; Roles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary transition-colors">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+</div>
+<div class="mt-auto">
+<div class="rounded-xl bg-gradient-to-br from-primary to-blue-700 p-4 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-xl">help</span>
+<h4 class="font-semibold text-sm">Need Help?</h4>
+</div>
+<p class="text-xs text-blue-100 mb-3 leading-relaxed">Check our docs or contact support for assistance.</p>
+<button class="w-full py-1.5 bg-white/10 hover:bg-white/20 rounded text-xs font-medium transition-colors">Support Center</button>
+</div>
+</div>
+</nav>
+<main class="flex-1 overflow-y-auto bg-background-light p-4 md:p-8">
+<div class="max-w-7xl mx-auto space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h1 class="text-2xl font-bold text-slate-900">Student Search &amp; Management</h1>
+<p class="text-slate-500 text-sm mt-1">Manage student profiles, view application statuses, and take action.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filters
+                    </button>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+                        Add Student
+                    </button>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary text-base transition-all" placeholder="Search by Student ID, Name, or Email" type="text"/>
+<div class="absolute inset-y-0 right-2 flex items-center">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="text-sm text-slate-500 py-1.5 mr-2">Quick Filters:</span>
+<button class="px-3 py-1.5 rounded-full bg-blue-50 text-primary text-xs font-medium border border-blue-100 hover:bg-blue-100 transition-colors">All Students</button>
+<button class="px-3 py-1.5 rounded-full bg-white text-slate-600 text-xs font-medium border border-slate-200 hover:bg-slate-50 transition-colors">Pending Applications</button>
+<button class="px-3 py-1.5 rounded-full bg-white text-slate-600 text-xs font-medium border border-slate-200 hover:bg-slate-50 transition-colors">Document Verification</button>
+<button class="px-3 py-1.5 rounded-full bg-white text-slate-600 text-xs font-medium border border-slate-200 hover:bg-slate-50 transition-colors">Visa Process</button>
+<button class="px-3 py-1.5 rounded-full bg-white text-slate-600 text-xs font-medium border border-slate-200 hover:bg-slate-50 transition-colors">Loan Approved</button>
+</div>
+</div>
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 border-b border-slate-200 text-slate-500 text-xs uppercase tracking-wider font-semibold">
+<th class="px-6 py-4 w-12">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</th>
+<th class="px-6 py-4">Student Profile</th>
+<th class="px-6 py-4">Student ID</th>
+<th class="px-6 py-4">Application Status</th>
+<th class="px-6 py-4">Documents</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKFLCEChvK0p72EMkzCR-TOr88BCXXWjxWV6NKz5Y_Ogwmrbo-3BZ4a7W0eL_GPlNi6hKqC3oo-4Y21txzVjCAAamZSurSZxPgDZshzb2wBJWmGdsj8RNzCGZXFnItl4o7Ifq5TZrWwHjjCw1hoqm0Tl9EYws06SrSR7XDoNWFHwYWPserk0DM65ssAb7MDJztaZNxxnG-Yz7Omq5MjftdDSeLB_4ml456rHxDDOpbDuK5gPUJGRsJnxUVdazQO_pZdPsNYidl5dc');"></div>
+<div>
+<p class="text-sm font-semibold text-slate-900">Emily Johnson</p>
+<p class="text-xs text-slate-500">emily.j@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-mono text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">STU-2023-8891</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="text-sm font-medium text-slate-700">Submitted</span>
+</div>
+<span class="text-xs text-slate-400">Harvard University</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                        Verified
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                                        Manage Applications
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7NBV60ztxEegZoH7gc1y-eIN1ufjVI7Jc1stswfXZASWR37YMZlfnYOmQMk1P6VwV0uS30EsDlwrbR1zMFGbl4yWADR5PVhLF5bDgTBR2z8EPzfPIe4p_2JjIqaZiaPt7woNrcGvwzWcLNylavL-5Lw6wFusmA1n9EjtwPkTaCcK7e4q3Ng90JBO-H4j-74Em-Hx6fKZqGKMy8x4JlCTwW_0UhfUOE6VSP96yqVirtLPvlxRO7kRj21PZxQYFEvDwceWxivYJh_I');"></div>
+<div>
+<p class="text-sm font-semibold text-slate-900">Michael Chen</p>
+<p class="text-xs text-slate-500">m.chen99@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-mono text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">STU-2023-9012</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-amber-500"></span>
+<span class="text-sm font-medium text-slate-700">In Review</span>
+</div>
+<span class="text-xs text-slate-400">University of Toronto</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-100">
+<span class="material-symbols-outlined text-[14px]">pending</span>
+                                        Pending
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                                        Manage Applications
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfzkHNtN7UfrGPnPyL5iQUkxLyvwWV7SbxH4jFHAAUpU5GE_8l_NRVQ5JN2Ws97KowrwkxYkLE4HjrkD9bfRneLHrDPXJM1pdLvJxyqncdir9S25WLrMV9jI7LF8ht7h5MTxs1NK5RbRALsB9Frq4mM9axBoBJUVxKdtz1GfTRXixjtppbLuIfbzw9yrLVuL_EawYK5P7paUY0DEqHomh1fx5qmSNyZGlOfbr_iMFItHbkj8RizW-WtQoo68JPaMqNyhR-ueJGwjk');"></div>
+<div>
+<p class="text-sm font-semibold text-slate-900">Sarah Williams</p>
+<p class="text-xs text-slate-500">sarah.w@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-mono text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">STU-2023-4451</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-red-500"></span>
+<span class="text-sm font-medium text-slate-700">Action Required</span>
+</div>
+<span class="text-xs text-slate-400">Oxford University</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-100">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                                        Missing Docs
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                                        Manage Applications
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm">
+                                            RJ
+                                        </div>
+<div>
+<p class="text-sm font-semibold text-slate-900">Rajesh Kumar</p>
+<p class="text-xs text-slate-500">r.kumar@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-mono text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">STU-2023-1120</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-blue-500"></span>
+<span class="text-sm font-medium text-slate-700">Offer Received</span>
+</div>
+<span class="text-xs text-slate-400">TU Munich</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                        Verified
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                                        Manage Applications
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<input class="rounded border-slate-300 text-primary focus:ring-primary/20" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0AV5rk5D0OEJqCOAWdL7oSB0IVDbdcsJcA8wsCxtS2IJbh7qEbI3od3YR1WJfF_y85sia59aRoTPD9KERSU65MU6Zoqi7u2o2WBX9LBBxBpNii4_e3lmAV5MUhuiR_x4dXepD3i0sFPAN1LTe9VZ7lezUkRPtslw6y-KubFo18YN_9nMKbyD_CSqtKkZq87LCngI8LtCWvtLMnCenhWTtlHRUYukQyMzOqiBreyXPlwnYfVAw44AIm6PGa-5TzBrl9wG_BechZVI');"></div>
+<div>
+<p class="text-sm font-semibold text-slate-900">David Miller</p>
+<p class="text-xs text-slate-500">david.m@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-mono text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">STU-2023-7721</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-slate-300"></span>
+<span class="text-sm font-medium text-slate-700">Draft</span>
+</div>
+<span class="text-xs text-slate-400">No submission yet</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+                                        Incomplete
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 hover:bg-primary/10 rounded-lg transition-colors border border-transparent hover:border-primary/20">
+                                        Manage Applications
+                                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between px-6 py-4 border-t border-slate-200 bg-slate-50">
+<p class="text-sm text-slate-500">Showing <span class="font-medium text-slate-900">1</span> to <span class="font-medium text-slate-900">5</span> of <span class="font-medium text-slate-900">1,240</span> results</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-slate-300 rounded text-sm text-slate-600 hover:bg-white hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors" disabled="">Previous</button>
+<button class="px-3 py-1 border border-slate-300 rounded text-sm text-slate-600 hover:bg-white hover:text-primary transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

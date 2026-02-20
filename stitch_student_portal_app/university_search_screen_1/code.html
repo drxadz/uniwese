@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - University Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .active-tab {
+            border-bottom: 2px solid #0a66c2;
+            color: #0a66c2;
+        }
+        .ios-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 gap-3">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 placeholder:text-slate-500" placeholder="Search universities, courses..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</button>
+</div>
+<div class="flex px-4">
+<button class="flex-1 py-3 text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            Students
+        </button>
+<button class="flex-1 py-3 text-sm font-semibold active-tab">
+            Universities
+        </button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<span class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium whitespace-nowrap">Global Top 100</span>
+<span class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium whitespace-nowrap">Engineering</span>
+<span class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium whitespace-nowrap">India Only</span>
+<span class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium whitespace-nowrap">Affordable</span>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg ios-shadow overflow-hidden p-4 border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="University Logo" class="w-full h-full object-cover" data-alt="Minimalist emblem of a prestigious university" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCej69g3PvFaUpE1ujE5SBYhsp63kmLwbbUqWHtlxCm2rDZ-nHDEOVpGvgowseaqTGXUuR6IWR7Ef1uI6y1YvdXnvz9aK1BgB8Na88dZIrX2Y8fpxi4050ROOb4ro1-nhehXYkNad3wTrjkOyua7NWGgvO3KYUsGSaIKCCyVVZbGuWKY1y5C__ejcvZZdJ4h0Bs3uay8jIxVpxUOXsEZrzeDQEDj-CunCTXE00m1KMni1lt3s5QYMdO399TIj49Ebqz7LlcDiMHg5jS"/>
+</div>
+<div>
+<h3 class="font-bold text-base text-slate-900 dark:text-slate-100 leading-tight">University of Delhi</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Public University • Established 1922</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 bg-primary/10 text-primary rounded text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px] fill-1">military_tech</span>
+                #1 NIRF
+            </div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">location_on</span>
+<span class="text-xs text-slate-600 dark:text-slate-400">New Delhi, India</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">payments</span>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-300">₹10k - ₹50k/year</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Portrait of a young male student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnX6hrV92MIi047dAk94muuwfEOUnQyzjQFwuvqmc7z-r1S3EAHVdnGk7r-Bzup932WzEUgoiBTsB2Fz1lNlqn_fg5yhgCZdGZ8tbEY0N9tU23t5SCIt-n18zXG6hvCL3D8ag9xSxYbKCe2lhxq_70bRC6gjIRdv9i_ZmbX-RBTzwbxC-3Ec6IDIZZqoN69XdIwCaMOpG-mYivIbs9b2wfUOrQR2hRWSmmN8jZtO3Ol_h87Z_a2OoZ7y_EdevLT_YdUc5DkXHSq86s"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Portrait of a young female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKKWt0YY4whmXzGJ4uhPeN-bQiNRJw074zpI15hzKBMlZCUPEH0_NFE2Yrb6amtvFdUwOMO3z-mWtH6Ksf3QexQRN2oJ_O_Di_QGjASrTzfq08J-rdD-eHBuTRvy4p7SC5HbRQQWxncwoiaEDWHQvepuLrVO93_cgM2Gjb0_WBEvx5RaBebQAI5DnIq1JV5gJLeU1AcpMWnkNsaQvGKy7BkU0QSN1vogaW3M9zZdnJVrmuB9J_4k3hZ53KY9Pn5EJIMUmMFeFSoQEM"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-primary/20 flex items-center justify-center text-[8px] font-bold text-primary italic">
+                    +140
+                </div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm">
+                Apply Now
+            </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg ios-shadow overflow-hidden p-4 border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="ASU Logo" class="w-full h-full object-cover" data-alt="Modern geometric shield logo for ASU" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaEcCPV_l1eHdbA8ckd5O2ZLIalS5gk8_imgzO57eAKOvBPl5nc8J1atA7TMuXIIi4ClpJIIegjVR2YPWgjDv_YYiq8Ra7XIyVGCU_BvG0gu16qOPNBNBYWho2nyFGos7-a8KxksFh0mIvJ-C0nygZXX9KckbMmqQZKpCKvtuaOjGxORjBu0_jnVXr6kijvnCYtIUYfEybVCrnWb3XgggxdypXLO2yw6d4riwMDxsT3dq11s_xMtGuAVHT5SpG7ZPiuPp2O-jaoLvw"/>
+</div>
+<div>
+<h3 class="font-bold text-base text-slate-900 dark:text-slate-100 leading-tight">Arizona State University</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Research University • USA</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px] fill-1">star</span>
+                #1 Innovation
+            </div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">location_on</span>
+<span class="text-xs text-slate-600 dark:text-slate-400">Tempe, Arizona</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">payments</span>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-300">$30k - $50k/year</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Portrait of a male graduate student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiXRSQZYnP08o9z5IGwMT7aCnSBqh_ypJURXzxkKuQHpmKKJQWeJah8FOgF6oDSGSjG1v2EX5AD9D7wzPWd1JIqpzUTv9aGT5fPeU3e0cU0OhWOMMrBBc8uwzUqEdo01HAqgilhKjhVE8x6uOmWz0Y6eQGcaaUrVI4kmwPvUNiPTh_HGNyD4mMhDTaAV4b8Rbaz6Xo0inG9Atwm86XhuPSi0yKymKJiBT-G1B_fUY8HpdI5eYHimMuNaECHStlUIp1W058_0x2W31e"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Portrait of a female graduate student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW7iMQlqbHTIgIhgACK2LotXc4-qT426YxeUrj2u06kfKLZyJTgdOLpkkc1e-lPaLpNfybKb7i_AZc9q6hUM4C98xvVsWu7HYfmjM_5EX2IKFcrjl7pa_0KTOWMcy-Y3EKVxv-GxawQwN4TtKo9M6xA26RIo9ZfZHZ1tjOxK2LZ_bgbTnknEpBbonhn2eI2VItGwBcSwNfBEQjMJFFHnF9Z_tvZ3vKslAitthVQdKZ_06xrq_7gy10jDqm4H1GjblCuK-3Ga0z7Go8"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-primary/20 flex items-center justify-center text-[8px] font-bold text-primary italic">
+                    +85
+                </div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm">
+                Apply Now
+            </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg ios-shadow overflow-hidden p-4 border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden">
+<img alt="IIT Logo" class="w-full h-full object-cover" data-alt="Technical institute logo with a cogwheel icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFmeyrXBCnK9PoJY-xVPUV24GJSvqpKA4p8x6vHr2NdKn_Dgkpfa1_VZ13QWNTh2sQqCAASH8MjcbV_q9QqhoC3qBl9tR0pYvtbkyDZV5QvT9NShnJY8Ra72U2NOxL_4EPtFMqFlL3z52eZfcKtlO-Apho-89s2YwNZPg9IETiisaEZ6eQ3tq6dvNze7BVXqAWqfYh2Cird8lXKlv-C3R77wGnoGRR__ltCvLTg5aW0J06h9_H1BB-Ypb9aozY3cJcztAZ_-ZYDAo0"/>
+</div>
+<div>
+<h3 class="font-bold text-base text-slate-900 dark:text-slate-100 leading-tight">IIT Bombay</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Engineering Excellence • India</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 bg-green-500/10 text-green-600 dark:text-green-400 rounded text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px] fill-1">military_tech</span>
+                #3 Engineering
+            </div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">location_on</span>
+<span class="text-xs text-slate-600 dark:text-slate-400">Mumbai, India</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">payments</span>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-300">₹2L - ₹3L/year</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Close up of a smiling student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmPoKCyBfc77dWXe4AuxdgV0uQlsXiiCPtHRnaFRnPE39TgAMX7voj7Mc52se4twOn9A3FOddZfj4GVo42F1rLszTKsdtDnUrOk6cMul8-_zvdsiZN7dZyLlrz5xkDzq8rWVQfifct4nYgjjF37LsaXHLyOWuP2iiQM2fGRVIbUSuMGrINpl-VKTSk5DFr1ig3gkptywdLefgwQV1HdcHWbY6rgQBVzrk5yZTDfiYHL_monTyc7H6v673x6Z30OiMat97MHd0IDjd5"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-900 bg-primary/20 flex items-center justify-center text-[8px] font-bold text-primary italic">
+                    +210
+                </div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm">
+                Apply Now
+            </button>
+</div>
+</div>
+</main>
+<nav class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-2 py-2 flex items-center justify-between safe-area-bottom">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 w-1/5" href="#">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 w-1/5" href="#">
+<span class="material-symbols-outlined text-[26px]">group</span>
+<span class="text-[10px] font-medium">Network</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 w-1/5" href="#">
+<span class="material-symbols-outlined text-[26px]">notifications</span>
+<span class="text-[10px] font-medium">Notifications</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 w-1/5" href="#">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400 w-1/5" href="#">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden border border-slate-200 dark:border-slate-700">
+<img alt="Profile" data-alt="Small circular avatar of the user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlJRJeI-In7aIhfeFPoOo1rKhhrqqtguzi8W7K2N6dM1DI7BSODkoS3at-2-JnWmswoGZGYz5hEwb2L0orWPjD2RePVQfX-m-3rp-IF2jnoxviHLKuE3vCjTmI5E7Fn5UeMS4sm4mWigbaY9X10tZMiwydNf3UUOIs1Gk5nLpf7wqoZBHPoewGoiW6eRems3mJkKyv4CAN9XvgHhQSM94W6Y1AbIWj2_FITOcV3NU0lyr0N_mohr5AeixBsUB5nnmD_7N9iD8AjIP_"/>
+</div>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

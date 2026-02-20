@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Password Update Success - UniWese</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0a69c2",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101922",
+                "success": "#10B981", // Added for the green checkmark requirement
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+<!-- Main Container -->
+<div class="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8">
+<!-- Success Card -->
+<div class="w-full max-w-[480px] bg-white dark:bg-[#1e2936] rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden relative">
+<!-- Top decorative bar (optional branding touch) -->
+<div class="h-1.5 w-full bg-primary absolute top-0 left-0"></div>
+<div class="px-8 py-10 sm:px-12 sm:py-12 flex flex-col items-center text-center">
+<!-- Success Illustration -->
+<div class="mb-6 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-success text-5xl" style="font-size: 48px;">check_circle</span>
+</div>
+</div>
+<!-- Headings -->
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
+                    Password Updated!
+                </h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8">
+                    Your password has been successfully reset. You can now use your new password to sign in to your account securely.
+                </p>
+<!-- Action Button -->
+<button class="w-full inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 group">
+<span>Proceed to Login</span>
+<span class="material-symbols-outlined ml-2 text-lg group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+</button>
+</div>
+<!-- Card Footer/Help Link -->
+<div class="bg-slate-50 dark:bg-slate-800/50 px-8 py-4 border-t border-slate-100 dark:border-slate-700 text-center">
+<p class="text-xs text-slate-500 dark:text-slate-400">
+                    Having trouble logging in? <a class="text-primary hover:text-primary/80 font-medium hover:underline" href="#">Contact Support</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="py-6 text-center">
+<p class="text-slate-400 dark:text-slate-500 text-sm">© 2023 UniWese. All rights reserved.</p>
+</footer>
+</body></html>

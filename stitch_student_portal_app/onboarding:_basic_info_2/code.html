@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Basic Info - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .education-card input:checked + div {
+            @apply border-primary bg-blue-50/50 dark:bg-primary/10 ring-2 ring-primary/20;
+        }
+        .education-card input:checked + div .icon-box {
+            @apply bg-primary text-white;
+        }
+        .education-card input:checked + div .check-indicator {
+            @apply flex;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-screen max-w-[430px] flex-col bg-white dark:bg-slate-950 overflow-hidden shadow-2xl">
+<div class="pt-12 px-6 pb-2">
+<div class="flex items-center justify-between mb-3">
+<button class="flex items-center justify-center -ml-2 p-2 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="text-[10px] font-bold uppercase tracking-[0.1em] text-primary">Onboarding</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Step 1 of 3</span>
+</div>
+<div class="w-10"></div>
+</div>
+<div class="relative h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+<div class="h-full bg-primary transition-all duration-700 ease-out" style="width: 33.33%;">
+<div class="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-r from-transparent to-white/20"></div>
+</div>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto px-6 pt-6 pb-32">
+<div class="mb-8">
+<h2 class="text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100 tracking-tight">Personalize your journey</h2>
+<p class="mt-2 text-base text-slate-600 dark:text-slate-400">
+                    Select your current status to help us find the best opportunities for your career.
+                </p>
+</div>
+<div class="space-y-8">
+<div class="flex flex-col gap-2">
+<label class="text-[13px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400" for="full-name">
+                        Full Name
+                    </label>
+<div class="relative">
+<input class="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-base text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 focus:bg-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:placeholder:text-slate-600 transition-all outline-none" id="full-name" name="full-name" placeholder="e.g., Rahul Sharma" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<label class="text-[13px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                        Current Education Level
+                    </label>
+<div class="grid grid-cols-1 gap-3">
+<label class="education-card relative cursor-pointer">
+<input checked="" class="peer hidden" name="edu_level" type="radio" value="high-school"/>
+<div class="flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-200 hover:border-slate-200">
+<div class="icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">High School</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Class 10 - Class 12</p>
+</div>
+<div class="check-indicator hidden h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+</label>
+<label class="education-card relative cursor-pointer">
+<input class="peer hidden" name="edu_level" type="radio" value="undergraduate"/>
+<div class="flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-200 hover:border-slate-200">
+<div class="icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">Undergraduate</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">B.Tech, B.Com, B.Sc, etc.</p>
+</div>
+<div class="check-indicator hidden h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+</label>
+<label class="education-card relative cursor-pointer">
+<input class="peer hidden" name="edu_level" type="radio" value="graduate"/>
+<div class="flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-200 hover:border-slate-200">
+<div class="icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">Graduate</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Master's or Ph.D candidates</p>
+</div>
+<div class="check-indicator hidden h-6 w-6 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[13px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400" for="interested-degree">
+                        Interested Field
+                    </label>
+<div class="relative">
+<select class="appearance-none w-full rounded-xl border border-slate-200 bg-slate-50 p-4 pr-12 text-base text-slate-900 focus:border-primary focus:ring-4 focus:ring-primary/10 focus:bg-white dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-all outline-none" id="interested-degree" name="interested-degree">
+<option disabled="" selected="" value="">What do you want to study?</option>
+<option value="btech">Engineering (B.Tech/BE)</option>
+<option value="mbbs">Medicine (MBBS/BDS)</option>
+<option value="bcom">Commerce (B.Com/BBA)</option>
+<option value="design">Design &amp; Architecture</option>
+<option value="arts">Humanities &amp; Social Sciences</option>
+<option value="law">Law (LLB)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center opacity-5 grayscale pointer-events-none select-none pb-8">
+<img alt="Abstract academic pattern" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLPsienmCo2lzUsQ3UmBHQ9sf9pxFM7JIfdEIk21eWbxQshZ7tAel_N5QMKMyC1jiaYWnFP-mVVV7hLVTHzsfop_5kkhyEbDn2H6YKAc2K3AwMqVa7ot2uLXG3bnVuok1Y7qkS4ilTuCpUNZ3qz5piboso-XQIH8u0iJIzitCmprafPnx0WciZtsBH0AaWoagVypAf-Y6D_1IPMiIEkHaJufgfzN49BmMzVq3ZNc6Tx1ph-zvjH96G9y_ieDAPQQ7WAZ6wOHUH9t3-"/>
+</div>
+</main>
+<footer class="absolute bottom-0 left-0 right-0 border-t border-slate-100 bg-white/95 p-6 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/95">
+<button class="flex w-full items-center justify-center gap-2 rounded-2xl bg-primary py-4 text-lg font-bold text-white shadow-xl shadow-primary/20 active:scale-[0.98] transition-all">
+<span>Continue</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<p class="mt-4 text-center text-xs text-slate-400 dark:text-slate-500">Step 1 of 3: Academic Profile</p>
+</footer>
+</div>
+</body></html>

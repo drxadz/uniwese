@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese Super Admin Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", // 8px as requested
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<div class="flex flex-1 min-h-screen w-full">
+<!-- Left Panel (Brand & Impact) -->
+<div class="hidden lg:flex lg:w-1/2 relative bg-slate-900 overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Modern university campus building with students walking" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKstgS-VrSaUn_f50f7cZkNr3mvt8EVlYYArAA0nGJYqG_foolG4rGl0DwzTBp3gNg9pDJr8bDbF_GnXIxtGs65uNd3mTC-9N9ejFPoCIunpqcJ1Sg2X_4tRHIdY0FOQyHJ1le6GrJ9z2zxOwBfgSoahLh8PKscMufynb_Gd2dEMZ8QSa03iCf5YBRaGl11ijPsn0fViz0jRVJo1Cwu4oQz10q6z_ugq_7r63XTaF_05VPo2r6zZ6qCjnAn8SSDxpOvVRuwToYLjk');">
+</div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col justify-between p-12 w-full h-full text-white">
+<div class="flex items-center gap-2">
+<!-- Logo Placeholder -->
+<div class="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">school</span>
+</div>
+<span class="font-bold text-xl tracking-tight">UniWese</span>
+</div>
+<div class="max-w-xl">
+<div class="mb-6 flex gap-1">
+<span class="material-symbols-outlined text-yellow-400 fill-1">star</span>
+<span class="material-symbols-outlined text-yellow-400 fill-1">star</span>
+<span class="material-symbols-outlined text-yellow-400 fill-1">star</span>
+<span class="material-symbols-outlined text-yellow-400 fill-1">star</span>
+<span class="material-symbols-outlined text-yellow-400 fill-1">star</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight mb-4">"Empowering 50,000+ students worldwide to achieve their academic dreams."</h2>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<img alt="Student profile" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbEpyKgLR4DnYNE1b7o_CV4jxrieYmdFMdoeiDgMVMWWksXULD74yl316-Qbx0vnjPXPZyTI8h_vYX-Tlr_2qjjoUBp6mlFNaMxMfG6hT4GzP5S7gg667tocFZkM4UYM-gUNUpXof6rRxDlPrd3PpTPchJ6-E78LctoSQqyNjp2Xd0UdBsuDB2_n_Vfp5mCkTUrBs7wosNMC_otdknBEtXsvODPckoaD3CGNX9lcuT158kS6kHlt6q01M3tbkbC_nfoweIw-wkDxA"/>
+<img alt="Student profile" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a male student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2D6Wd1BAGCTJlASnJMS1P_U91nZCQ3l0XuTWjl9THTyM2jKo-PHVPCDYzU3fz_kB6asR_5hsHzzPSSKz2RZWKGl6hDyefO2BUXWVaMDU5-gOr09SkwpS3utRog61lmiqDsDajk8W5QAUzfloWPOCzReM67NaNnqBJBwUfZ_ch73zGPtyod_MKtOPNca0MOcs_xEWGzG6XkJlOBU3oRzJ0fAIhY_eAYA4s6C-svSYgREWN_acwWAGUGwXXAl3ZQazsWUqL6b83Wao"/>
+<img alt="Student profile" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a smiling student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtOHpcP2p7Xqy_iTafvXFpabHP5eCdfAOiInLQVXNs3EPF9NEcZmpcGDhU9nFadCp8TZjl5v-TF89hGNW0uI8PTG4SEBo9RYDt3Wlb-VAtA8-bxPPzzsQep4ArKSwOYM_uLD8k05gpy4iGZ5T7E2ClnSi2M-3bwqyhw01z8NsrUAugdMgh3XpB_V9QhWAoAbpWn0--7CBtKMvsJ2C3VO_lJI7mmJhRQdWhpUukVI-Yax686lzsjf-ENeqEwdevhRvPUj0SUZoTfug"/>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-white/10 backdrop-blur text-xs flex items-center justify-center font-medium">+2k</div>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold">Global Community</span>
+<span class="text-xs text-white/80">Join the revolution</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-end text-xs text-white/60">
+<p>© 2024 UniWese Inc.</p>
+<p>Photo by Unsplash</p>
+</div>
+</div>
+</div>
+<!-- Right Panel (Authentication) -->
+<div class="w-full lg:w-1/2 flex flex-col bg-white dark:bg-slate-900 overflow-y-auto">
+<div class="flex-1 flex flex-col justify-center items-center px-6 py-12 lg:px-20">
+<div class="w-full max-w-md space-y-8">
+<!-- Mobile Logo (Only visible on small screens) -->
+<div class="lg:hidden flex items-center gap-2 mb-8">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+<span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">UniWese</span>
+</div>
+<!-- Header -->
+<div class="text-left">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Welcome Back</h1>
+<p class="mt-2 text-slate-600 dark:text-slate-400">Please enter your details to access the Super Admin Panel.</p>
+</div>
+<!-- Form -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Admin Email -->
+<div>
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" for="email">Admin Email</label>
+<div class="mt-2 relative rounded-lg shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">mail</span>
+</div>
+<input class="block w-full rounded-lg border-0 py-3 pl-10 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:ring-slate-700 dark:text-white dark:placeholder:text-slate-500 sm:text-sm sm:leading-6" id="email" name="email" placeholder="admin@uniwese.com" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div>
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" for="password">Password</label>
+<div class="mt-2 relative rounded-lg shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">lock</span>
+</div>
+<input class="block w-full rounded-lg border-0 py-3 pl-10 pr-10 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-slate-800 dark:ring-slate-700 dark:text-white dark:placeholder:text-slate-500 sm:text-sm sm:leading-6" id="password" name="password" placeholder="Enter your password" type="password"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer hover:text-slate-600">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">visibility_off</span>
+</div>
+</div>
+</div>
+<!-- Forgot Password & Remember Me -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-600" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-700 dark:text-slate-300" for="remember-me">Remember me</label>
+</div>
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-primary/80 transition-colors" href="#">Forgot password?</a>
+</div>
+</div>
+<!-- Submit Button -->
+<div>
+<button class="flex w-full justify-center rounded-lg bg-primary px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200" type="submit">
+                                Sign In
+                            </button>
+</div>
+</form>
+<!-- Divider -->
+<div class="relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center text-sm font-medium leading-6">
+<span class="bg-white px-6 text-slate-500 dark:bg-slate-900 dark:text-slate-400">Or continue with</span>
+</div>
+</div>
+<!-- SSO Button -->
+<div>
+<button class="flex w-full items-center justify-center gap-3 rounded-lg bg-white px-3 py-3.5 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 transition-all duration-200 dark:bg-slate-800 dark:ring-slate-700 dark:text-white dark:hover:bg-slate-700" type="button">
+<span class="material-symbols-outlined text-[20px] text-slate-500">key</span>
+                            Single Sign-On (SSO)
+                        </button>
+</div>
+<!-- Footer Links -->
+<div class="mt-8 text-center text-xs text-slate-500 dark:text-slate-400 space-x-4">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:underline" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

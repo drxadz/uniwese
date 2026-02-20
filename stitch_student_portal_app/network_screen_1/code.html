@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese - Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- iOS Status Bar Spacer -->
+<div class="h-11 w-full bg-white dark:bg-slate-900 sticky top-0 z-50"></div>
+<!-- Header Section -->
+<header class="sticky top-11 z-50 flex items-center justify-between bg-white dark:bg-slate-900 px-4 py-3 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Profile image of the user" class="w-full h-full object-cover" data-alt="Young Indian male student profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHnkH9aeF2M4y4fw5He7kb98qiDtELEx_xepqVuA6wOifu5gv6JR4l_Ei6dwriBkViUA9ZQ5GG5pznDDTf3YfqeWVNyUAabveeGHWCSIZITdzLED3cFou1ipiqogThHW4s_fPdArw5vpHPWUdEPr_UAs59I9xvB5xB5Ih0300V1vOIw5bXjGfFVU1DlsBae8HsQ1qJb0AbB8JOeuFiiCRkahX6g7nrINgTlGeaMBPjQp7IM4ZZJ0zblzO_o6IWo5Ao6gBv1d20Rv-j"/>
+</div>
+<div class="relative">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-1.5 pl-9 pr-4 text-sm w-48 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Search" type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-lg">search</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">chat</span>
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">settings</span>
+</div>
+</header>
+<main class="pb-24">
+<!-- Invitations Section -->
+<section class="bg-white dark:bg-slate-900 mt-2 border-y border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 py-3">
+<h2 class="text-lg font-bold">Invitations</h2>
+<a class="text-primary font-semibold text-sm" href="#">See all (3)</a>
+</div>
+<!-- Horizontal Invitation Stack -->
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 hide-scrollbar">
+<!-- Invitation Card 1 -->
+<div class="min-w-[280px] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col items-center text-center bg-white dark:bg-slate-800 shadow-sm">
+<img alt="Invitation from Priya" class="w-20 h-20 rounded-full object-cover mb-3" data-alt="Young Indian female student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiTekh3YrjSGCyS86YaG-VpYCQ9zGj6cTI9Oar9iB3SM3TmCaYRtK4V0mbDHDzW9hpnTBJjbRoAczJKlGh1iO772Kelk1WLhHvnae46Pfi0I72qImJ1yedC2M9GfhW7E5eemJ9kPQ_8VtaewQw54cf9JnHDictmUBUddZNfEose-35_Iwk18DJ6nQLLV9ti_tSwUiuYACjHrP5Y1x8sFoNGUaKItI039DYoHO1yziGVrc7moj2i0xdzPX-7LppgEZpZpxAkmZwzKLV"/>
+<h3 class="font-bold text-slate-900 dark:text-white">Priya Sharma</h3>
+<p class="text-xs text-slate-500 mb-1">IIT Bombay • Computer Science</p>
+<p class="text-[10px] text-slate-400 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">group</span> 12 mutual connections
+                    </p>
+<div class="flex w-full gap-2">
+<button class="flex-1 py-1.5 border border-slate-300 dark:border-slate-600 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-300">Ignore</button>
+<button class="flex-1 py-1.5 bg-primary rounded-full text-sm font-semibold text-white">Accept</button>
+</div>
+</div>
+<!-- Invitation Card 2 -->
+<div class="min-w-[280px] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col items-center text-center bg-white dark:bg-slate-800 shadow-sm">
+<img alt="Invitation from Aryan" class="w-20 h-20 rounded-full object-cover mb-3" data-alt="Young Indian male student headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0po9vIw1_4xVSoqTpNpWDdF6ffkzLOHRyUU4jKGP1DWTDB-ShR9MtCiv7rg5soTu8S6DG7ccAzyxnqi0E_9TKDEJqJkLZBl3yTRwMXpOXIESC-iOmTEZ7_8qE7Ab301mnDzXhYUbM2EE-357ELHA9sHC5JBJ6u8qEMbbWftcUAvwMeD-1B_9fYczeYN0CxhCk5SgkxPByf12QnLPS2oxKnaDZD5fo4q0pjEiHxZEHlgDkYAk8frS1WteReVz4msxP3UPVUKaQcwoc"/>
+<h3 class="font-bold text-slate-900 dark:text-white">Aryan Kapoor</h3>
+<p class="text-xs text-slate-500 mb-1">University of Delhi • Economics</p>
+<p class="text-[10px] text-slate-400 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">group</span> 8 mutual connections
+                    </p>
+<div class="flex w-full gap-2">
+<button class="flex-1 py-1.5 border border-slate-300 dark:border-slate-600 rounded-full text-sm font-semibold text-slate-600 dark:text-slate-300">Ignore</button>
+<button class="flex-1 py-1.5 bg-primary rounded-full text-sm font-semibold text-white">Accept</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Suggestions Section -->
+<section class="mt-2 bg-white dark:bg-slate-900 pt-4 px-4 border-t border-slate-200 dark:border-slate-800">
+<h2 class="text-lg font-bold mb-4">People you may know</h2>
+<!-- Grid of Cards -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Suggestion Card 1 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800 shadow-sm">
+<div class="h-16 w-full bg-gradient-to-r from-primary to-blue-400"></div>
+<div class="px-3 pb-4 -mt-8 flex flex-col items-center text-center">
+<img alt="Student profile" class="w-16 h-16 rounded-full border-2 border-white dark:border-slate-800 object-cover mb-2" data-alt="Profile of a female Indian university student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGVmy-7sqF-RlqsBSqF1oQjuqfpDEUEGYNUedMAgFoqAYIjibFWqHJRxRWOcYqAPllbIVanIf9DNa3ityXQnXmnF6QzAxjJwo5qwaImyeETN-o846DWfUsLXkB57dNsAtW2mrNkV1cRnPSZ31pPCSQG68nIpR2aqvofEY1H3s63eAhyAu8F0KmGDFENP7skG0ByR9Uw0PbSK-VHnSRg6A0JwQwPVJHheZ60kRPLrVGl0FudKhD-px-pRWcy_9ctGPkXIAXK2oxrayw"/>
+<h4 class="font-bold text-sm leading-tight">Anjali Mehta</h4>
+<p class="text-[10px] text-slate-500 mb-1 line-clamp-1">VIT Vellore • Engineering</p>
+<p class="text-[9px] text-slate-400 mb-3 italic">5 mutual connections</p>
+<button class="w-full py-1 border border-primary text-primary rounded-full text-xs font-bold hover:bg-primary/10 transition-colors">
+                            Connect
+                        </button>
+</div>
+</div>
+<!-- Suggestion Card 2 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800 shadow-sm">
+<div class="h-16 w-full bg-gradient-to-r from-blue-700 to-indigo-500"></div>
+<div class="px-3 pb-4 -mt-8 flex flex-col items-center text-center">
+<img alt="Student profile" class="w-16 h-16 rounded-full border-2 border-white dark:border-slate-800 object-cover mb-2" data-alt="Profile of a male Indian university student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnE8XKg-sZFZyeJzmiB6JOebYDAqtHpIf3c9BzkWGsSw3L2T4Vmo3WGTGf6hCwOtewntGE3LfrXyJ7aIoWNwtrHxTemFBhfQ-FAuqnjQyefG0-lrnPOegRY9GjKyv8goGGKVxeeVB9h4lA4zxPuQDP3Rwj_qBPjMvZWflMrGbO45g4wt2qhgERFciK9ecV4NRSVDJ0OuVh3FHGjSv8lsBRc3GAy7vI70044ikj77NrgylYvFtig0WiFGdODwk0BKcJOar1Ki9pLT0R"/>
+<h4 class="font-bold text-sm leading-tight">Rohan Verma</h4>
+<p class="text-[10px] text-slate-500 mb-1 line-clamp-1">SRM University • BBA</p>
+<p class="text-[9px] text-slate-400 mb-3 italic">14 mutual connections</p>
+<button class="w-full py-1 border border-primary text-primary rounded-full text-xs font-bold hover:bg-primary/10 transition-colors">
+                            Connect
+                        </button>
+</div>
+</div>
+<!-- Suggestion Card 3 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800 shadow-sm">
+<div class="h-16 w-full bg-gradient-to-r from-cyan-600 to-blue-500"></div>
+<div class="px-3 pb-4 -mt-8 flex flex-col items-center text-center">
+<img alt="Student profile" class="w-16 h-16 rounded-full border-2 border-white dark:border-slate-800 object-cover mb-2" data-alt="Profile of an Indian girl in college" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmPo1tuHHZrS9_tpqQCowT6qKWVTjZVgNE-soYDfUy281vGwFsEQkNDNkTShTe283O3sN5WeoAiss3usXBWrXTfLfahZ8p6wQIx8zg5igplidGrqP8qpaf8XHZOE4bDlEgSSpyyUTIs3O6_M4dEPWgF1W1m6zXtYqVXCduBGtLwoXQDzAJQyjusiqOLsmYXj2pKOja4P2HEtAK039jAWLTxZLj_1ra7n0LG527hN8WPA3sHVZ23LDYiI1Td3s8x3ORb0b8wPaqwy5s"/>
+<h4 class="font-bold text-sm leading-tight">Sanya Gupta</h4>
+<p class="text-[10px] text-slate-500 mb-1 line-clamp-1">Amity • Psychology</p>
+<p class="text-[9px] text-slate-400 mb-3 italic">21 mutual connections</p>
+<button class="w-full py-1 border border-primary text-primary rounded-full text-xs font-bold hover:bg-primary/10 transition-colors">
+                            Connect
+                        </button>
+</div>
+</div>
+<!-- Suggestion Card 4 -->
+<div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden flex flex-col bg-white dark:bg-slate-800 shadow-sm">
+<div class="h-16 w-full bg-gradient-to-r from-blue-900 to-primary"></div>
+<div class="px-3 pb-4 -mt-8 flex flex-col items-center text-center">
+<img alt="Student profile" class="w-16 h-16 rounded-full border-2 border-white dark:border-slate-800 object-cover mb-2" data-alt="Profile of a male student wearing glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJHFCJOEjlwVW_7ibYY2S04Pu3fSQVenT_WNZL9DKHPvehbqJ_3NhUbEC1pjUWdky6ZRZj0c5q4Unx9VEjKHAy0UMdq0JnjWHxvm34VSDb8_ufPHumkWZFb4D7ljbtUrwB_IiMARhlUeiGZixXs4aVN1AKVK29982IRqgJPmUeD3tcynNOarnzBjcEGBwM3i75K0MtDKSQjl0fmBr-HB8_rPvwF9alfG1Km4BYpU5ZGNMpJ86GVVXlqTpoaFXjWZOCTsjlmbH-GNMH"/>
+<h4 class="font-bold text-sm leading-tight">Vikram Singh</h4>
+<p class="text-[10px] text-slate-500 mb-1 line-clamp-1">BITS Pilani • Physics</p>
+<p class="text-[9px] text-slate-400 mb-3 italic">3 mutual connections</p>
+<button class="w-full py-1 border border-primary text-primary rounded-full text-xs font-bold hover:bg-primary/10 transition-colors">
+                            Connect
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 pb-6 pt-2 z-50">
+<div class="flex items-center justify-between max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-primary transition-colors">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary fill-1">group</span>
+<span class="text-[10px] font-bold text-primary">Network</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">notifications</span>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-primary transition-colors">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">mail</span>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-primary transition-colors">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">account_circle</span>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-primary transition-colors">Profile</span>
+</a>
+</div>
+</nav>
+<!-- iOS Home Indicator Spacer -->
+<div class="fixed bottom-0 w-full h-1 bg-white dark:bg-slate-900 z-[60]"></div>
+</body></html>

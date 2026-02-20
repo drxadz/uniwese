@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Basic Info - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-navy": "#1e293b", "soft-navy": "#2c3e50", "accent-blue": "#0a66c2", primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {sans: ["Inter", "sans-serif"], display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        :root {
+            --ios-safe-top: env(safe-area-inset-top);
+            --ios-safe-bottom: env(safe-area-inset-bottom);
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white text-slate-900 font-sans">
+<div class="relative mx-auto flex h-screen max-w-[430px] flex-col bg-white overflow-hidden">
+<nav class="flex items-center justify-between px-6 pt-12 pb-4">
+<button class="flex items-center text-slate-400 hover:text-slate-900 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex-1 flex justify-center">
+<div class="flex gap-1.5">
+<div class="h-1 w-8 rounded-full bg-primary-navy"></div>
+<div class="h-1 w-8 rounded-full bg-slate-100"></div>
+<div class="h-1 w-8 rounded-full bg-slate-100"></div>
+</div>
+</div>
+<div class="w-8"></div>
+</nav>
+<header class="px-8 pt-8 pb-4 text-center">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-3">Your Profile</h1>
+<div class="flex items-center justify-center gap-2 text-slate-500">
+<span class="material-symbols-outlined text-sm text-green-600">verified_user</span>
+<p class="text-xs font-medium">Your data is encrypted and only used for college matching.</p>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-8 py-6 hide-scrollbar">
+<div class="space-y-10 max-w-sm mx-auto">
+<div class="group border-b border-slate-100 focus-within:border-primary-navy transition-all duration-300">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-1 group-focus-within:text-primary-navy" for="full-name">
+                        Full Name
+                    </label>
+<input class="w-full border-none bg-transparent px-0 py-3 text-xl font-medium text-slate-900 placeholder:text-slate-200 focus:ring-0" id="full-name" placeholder="Type your name..." type="text"/>
+</div>
+<div class="group border-b border-slate-100 focus-within:border-primary-navy transition-all duration-300">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-1 group-focus-within:text-primary-navy" for="education-level">
+                        Current Education
+                    </label>
+<div class="relative">
+<select class="w-full appearance-none border-none bg-transparent px-0 py-3 text-xl font-medium text-slate-900 focus:ring-0" id="education-level">
+<option disabled="" selected="" value="">Select level</option>
+<option value="class-10">Class 10</option>
+<option value="class-11">Class 11</option>
+<option value="class-12">Class 12</option>
+<option value="ug">Undergraduate</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-slate-300">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="group border-b border-slate-100 focus-within:border-primary-navy transition-all duration-300">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-1 group-focus-within:text-primary-navy" for="interested-degree">
+                        Goal Degree
+                    </label>
+<div class="relative">
+<select class="w-full appearance-none border-none bg-transparent px-0 py-3 text-xl font-medium text-slate-900 focus:ring-0" id="interested-degree">
+<option disabled="" selected="" value="">Interested in...</option>
+<option value="btech">B.Tech / Engineering</option>
+<option value="mbbs">MBBS / Medical</option>
+<option value="bba">BBA / Management</option>
+<option value="arts">Design &amp; Arts</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-slate-300">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center opacity-[0.03]">
+<img alt="background pattern" class="w-32 h-32 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLPsienmCo2lzUsQ3UmBHQ9sf9pxFM7JIfdEIk21eWbxQshZ7tAel_N5QMKMyC1jiaYWnFP-mVVV7hLVTHzsfop_5kkhyEbDn2H6YKAc2K3AwMqVa7ot2uLXG3bnVuok1Y7qkS4ilTuCpUNZ3qz5piboso-XQIH8u0iJIzitCmprafPnx0WciZtsBH0AaWoagVypAf-Y6D_1IPMiIEkHaJufgfzN49BmMzVq3ZNc6Tx1ph-zvjH96G9y_ieDAPQQ7WAZ6wOHUH9t3-"/>
+</div>
+</main>
+<footer class="px-8 pb-12 pt-4 bg-white">
+<button class="w-full flex items-center justify-between bg-primary-navy py-5 px-8 rounded-2xl text-white font-semibold transition-transform active:scale-[0.98] shadow-xl shadow-slate-200">
+<span class="text-lg">Continue</span>
+<span class="material-symbols-outlined font-light">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-slate-400 mt-6 uppercase tracking-[0.2em] font-semibold">
+                UniWese Professional Network
+            </p>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese Chat Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container (Mobile Form Factor) -->
+<div class="relative mx-auto flex h-screen max-w-md flex-col bg-white dark:bg-slate-900 shadow-2xl overflow-hidden border-x border-slate-200 dark:border-slate-800">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 p-3 ios-blur">
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-primary hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-3xl">chevron_left</span>
+</button>
+<div class="relative">
+<img alt="Rahul Sharma" class="h-10 w-10 rounded-full object-cover" data-alt="Professional portrait of a young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENbYPMajZL-s5s8zBxyVyoIGz4caNPKFg1y06TgY5kLeixvRHuIEQnatIFbbuAcPQ3bbL74sw5HqAzy8b1Qes0FBaroMLIfdhNlgrBc9OqFYBx3u_eLcvpVPBWE-D1pv_x9Wdah721zCCB3aDp4J17jA74gTHlarMWNyuESeSI5yOk072bY2Gycv265SVFwkbIDh0b1OwQ8QCsiZ554xW8TWCUqEZy3XhtQeRNiL84KIHTRrwomC6Pkw34FGJ0rHeBoxXbCDbaE5J"/>
+<span class="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white dark:border-slate-900 bg-green-500"></span>
+</div>
+<div class="ml-1">
+<h1 class="text-[16px] font-semibold leading-tight">Rahul Sharma</h1>
+<p class="text-[12px] text-slate-500 dark:text-slate-400 font-medium">Active now</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</header>
+<!-- Message List Area -->
+<main class="flex-1 overflow-y-auto bg-white dark:bg-slate-900 p-4 space-y-6">
+<!-- Date Separator -->
+<div class="flex items-center justify-center py-2">
+<span class="px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 dark:bg-slate-800 rounded-full">Today</span>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="flex flex-col gap-1">
+<div class="rounded-2xl rounded-bl-none bg-slate-100 dark:bg-slate-800 p-3 text-[15px] leading-relaxed text-slate-800 dark:text-slate-200">
+                        Hi! I've reviewed your SOP for the Masters in CS program. It looks strong, but we might want to polish the transition between your projects and your career goals.
+                    </div>
+<span class="ml-1 text-[10px] text-slate-400 uppercase font-bold">10:42 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex flex-row-reverse items-end gap-2 max-w-[85%] ml-auto">
+<div class="flex flex-col items-end gap-1">
+<div class="rounded-2xl rounded-br-none bg-primary p-3 text-[15px] leading-relaxed text-white">
+                        Thanks Rahul! I was feeling the same way. I've updated the third paragraph to focus more on the AI lab experience. Could you take a look?
+                    </div>
+<span class="mr-1 text-[10px] text-slate-400 uppercase font-bold">10:45 AM • Read</span>
+</div>
+</div>
+<!-- Sent Message (Document Attachment) -->
+<div class="flex flex-row-reverse items-end gap-2 max-w-[85%] ml-auto">
+<div class="flex flex-col items-end gap-1">
+<div class="group relative flex items-center gap-3 rounded-2xl rounded-br-none bg-primary p-3 text-white">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/20">
+<span class="material-symbols-outlined text-white">description</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="truncate text-sm font-semibold">SOP_Draft_V2_Final.pdf</span>
+<span class="text-[11px] text-white/80 uppercase">1.2 MB • PDF</span>
+</div>
+<button class="ml-1 flex h-8 w-8 items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+<span class="mr-1 text-[10px] text-slate-400 uppercase font-bold">10:46 AM</span>
+</div>
+</div>
+<!-- Received Message (Image) -->
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="flex flex-col gap-1">
+<div class="overflow-hidden rounded-2xl rounded-bl-none border border-slate-200 dark:border-slate-800">
+<img alt="Campus Preview" class="h-48 w-full object-cover" data-alt="Modern university campus building with green lawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXzT-_c4A1ekSY9dcS4E-7WP6kIoLfpyl-8cXO2r1vMyaNQqfJs6Jw9LxKshCZisLp0JG5gD1thwm2xF-o4RW8jYzIGJ_ajtTxNRxMLZGDu0xCviAnKUhI8lsWpmrNtG6HlDELuNTxfuV5lJqaLlbXO4JKqTlHgXiZMJUC1ZpPAVkizugfIuUCZE31xYxjriOoCyn-DnDhVI0gI0AulgMiiieN7-5X7YvHS3_Na_nctbFnbImzdCEoyb_WfTtIpLzn57GuneAHzC4i"/>
+<div class="bg-slate-100 dark:bg-slate-800 p-3 text-[14px] text-slate-700 dark:text-slate-300">
+                            By the way, check out the new engineering wing photos from the campus visit today!
+                        </div>
+</div>
+<span class="ml-1 text-[10px] text-slate-400 uppercase font-bold">11:02 AM</span>
+</div>
+</div>
+<!-- Typing Indicator (Simulated) -->
+<div class="flex items-center gap-2">
+<div class="flex gap-1 px-3 py-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+<span class="h-1.5 w-1.5 rounded-full bg-slate-400 animate-pulse"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-slate-400 animate-pulse delay-75"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-slate-400 animate-pulse delay-150"></span>
+</div>
+</div>
+</main>
+<!-- Message Input Area -->
+<footer class="sticky bottom-0 z-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pb-8 p-3 ios-blur">
+<div class="flex items-end gap-2">
+<!-- Attachments Group -->
+<div class="flex items-center gap-1 mb-1">
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Attach Document">
+<span class="material-symbols-outlined text-[22px]">attach_file</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Add Image">
+<span class="material-symbols-outlined text-[22px]">image</span>
+</button>
+</div>
+<!-- Text Input -->
+<div class="relative flex-1">
+<textarea class="w-full resize-none rounded-2xl border-none bg-slate-100 dark:bg-slate-800 py-2.5 pl-4 pr-10 text-[15px] focus:ring-1 focus:ring-primary/50 dark:text-slate-200 dark:placeholder-slate-500" placeholder="Write a message..." rows="1" style="max-height: 120px;"></textarea>
+<button class="absolute bottom-1 right-1 flex h-8 w-8 items-center justify-center rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Send Button -->
+<button class="mb-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] ml-0.5">send</span>
+</button>
+</div>
+<!-- Safe Area Indicator (iOS Style) -->
+<div class="mt-4 flex justify-center">
+<div class="h-1 w-32 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+</footer>
+</div>
+</body></html>

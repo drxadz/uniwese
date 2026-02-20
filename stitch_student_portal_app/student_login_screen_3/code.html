@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Life - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#0a66c2", "background-light": "#f6f8f6", "background-card": "#ffffff", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#f3f2ef] font-display text-slate-900;
+            }
+        }
+        .ios-shadow {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 0.75rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f3f2ef]">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-[#f3f2ef] pb-24">
+<div class="sticky top-0 z-50 flex items-center bg-white px-4 py-3 border-b border-slate-200">
+<button class="flex items-center text-slate-700">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex-1 px-4 text-center">
+<h1 class="font-bold text-slate-900 text-lg">Campus Life</h1>
+<p class="text-xs text-slate-500">Stanford University</p>
+</div>
+<button class="text-slate-700">
+<span class="material-symbols-outlined text-2xl">share</span>
+</button>
+</div>
+<div class="flex border-b border-slate-200 bg-white sticky top-[60px] z-40 px-4 overflow-x-auto hide-scrollbar">
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">About</button>
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">Requirements</button>
+<button class="py-3 px-4 text-primary border-b-2 border-primary font-semibold text-sm whitespace-nowrap">Campus Life</button>
+<button class="py-3 px-4 text-slate-500 font-semibold text-sm whitespace-nowrap">Alumni</button>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<section class="bg-white p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Campus Gallery</h3>
+<button class="text-primary text-sm font-semibold">View All (42)</button>
+</div>
+<div class="masonry-grid">
+<div class="masonry-item rounded-lg overflow-hidden bg-slate-100">
+<img alt="Main Quad" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdMqPOOKhBEbbqey41DQmz8eb66QCDBHVq7sXtsk1NBJanfUBkvHivB-atT_ROqrqAeYMyORgUwJWsUCnky0a5BngQj5_Rk9xKnA164tDwx1FrduJEzaXfqPpjYjSoP9gtl_ZcFcjwgtRKlFo8SHOCnq98bgnBwvypyNA9CNvbNFCsPFJZHwvYJ8DDlgyz6itzVSZ4xBuMUujRFTrzAQ6XVicvK07JsSUwgdzjYqsCEYR8SFFr_yDWSKctEVNGpR5DXgNtqSq9ocX"/>
+</div>
+<div class="masonry-item rounded-lg overflow-hidden bg-slate-100">
+<img alt="Library Interior" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBTFj4YZoQIy3OW7MtZWzCWBMAPRL4u6wiOv-dFyu_jMCBua7PVghh_J7Me9oP_ooEbR6CVoucCYJTfZJ22_l1AzdSuhlSKf0LnLPLkAwz39EzO1DBQeOXjZk-m0czu4f2koyLfsOsjsjFfU7KzBamBoIxD6JiENVVi_HIGMQqioTM5NWuuo5MwaTjfkSr_mTu4k-bM-roQGNfDFJMQySFOZYjmrp8Sj2EpSPNpvhPun3BFUceEpeUqAEId3QQrIXbO0X66N2DGUsq"/>
+</div>
+<div class="masonry-item rounded-lg overflow-hidden bg-slate-100">
+<img alt="Student Hub" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiqnGYoo_EqGhjnPIuTiTX6Aw5pnwSGdShfpqgJZvoRiqYyBXrLRA3AGTP6TKaQO9-ZGxinqpoXb03gzoY79JSEr6zYvZI3FlpzR3tEWZEsDGzbRyNjHgJrGqk-p2PfVXRRDECJ651fzHjw3a29B2Wl8xvS5cyM-sFIqpjQlC61V6FvGLb21RHR_aKB4pVOWhe-mmYTNBApck8feNZHm5l5-J-i1VURE5S-KE8Nsy1rmbt6hdgy2_Q3vTxFCyUHU8N-9LHPBxRUTYp"/>
+</div>
+<div class="masonry-item rounded-lg overflow-hidden bg-slate-100 relative group">
+<img alt="Sports Event" class="w-full h-32 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjGJLyiIsVLfuzPZQN2LAoTez2XT9O2GabCVQReM3lVUBTYLdvQgKT5XlJkZVbSSZWha2nCLu7BPXLbhehOLWO1gHrIjRtd9TxnWEeBLbB6vsQC4uGxzqtUsqlyZkRvVFtV4M3p44cT_CGnAW7LDJyZj72eA0eum5Y5KQiPbJQ1qTGvQUYVxPezG4cLJqina5kK5qWdhWS2oJX4sgFUbb1rSaRUpXENE7dtSJ6IW6zoOcBEQ4tketF6POguBSv-sPPjfBC2G2uNueU"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">play_circle</span>
+</div>
+</div>
+<div class="masonry-item rounded-lg overflow-hidden bg-slate-100">
+<img alt="Dorm Life" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmDaX7H0CsiN83eFY0LlbT3VPocPo759zQeTxJdIMNCULApFhclHU5E02SbDI6hyBO29pUSUMPHNUWtsPEAce92EOMM8fkdL3Wj6brgswHqj81hiQ-uOZh8xPbIHTytcTD4L386wiawrxiYaqUAfjTbfGiCsBgdGsTGRy2OdsNUs9M2UldRtxZw6iMrDKRjN1sGcJ0BW8leB9oxdUWR2IqMAMGHUAm--3kjiagFATUTGJBKVOMAPUeaKVW39LlrttzeYr9MC1lac8M"/>
+</div>
+</div>
+</section>
+<section class="bg-white p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Clubs &amp; Organizations</h3>
+<span class="text-slate-500 text-sm">200+ Active</span>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex gap-4 items-start border-b border-slate-100 pb-4">
+<div class="w-14 h-14 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-slate-900">Robotics Club</h4>
+<span class="bg-green-50 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Recruiting</span>
+</div>
+<p class="text-sm text-slate-600 mt-1 line-clamp-2">Building autonomous rovers for Mars simulations. Join our hardware or software team.</p>
+<div class="flex items-center gap-3 mt-2 text-xs text-slate-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">group</span> 120 Members</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">event</span> Weekly</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 items-start border-b border-slate-100 pb-4">
+<div class="w-14 h-14 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 text-orange-600">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-slate-900">Debate Society</h4>
+</div>
+<p class="text-sm text-slate-600 mt-1 line-clamp-2">Award-winning debate team competing nationally. Focus on policy and critical thinking.</p>
+<div class="flex items-center gap-3 mt-2 text-xs text-slate-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">group</span> 85 Members</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">emoji_events</span> National Champs</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-14 h-14 rounded-lg bg-purple-50 flex items-center justify-center flex-shrink-0 text-purple-600">
+<span class="material-symbols-outlined text-2xl">code</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-slate-900">Women in CS</h4>
+</div>
+<p class="text-sm text-slate-600 mt-1 line-clamp-2">Empowering women in technology through workshops, mentorship, and networking.</p>
+<div class="flex items-center gap-3 mt-2 text-xs text-slate-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">group</span> 350 Members</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-primary font-semibold text-sm border border-slate-200 rounded-full">View all organizations</button>
+</section>
+<section class="bg-white p-4">
+<h3 class="text-lg font-bold mb-4">Housing &amp; Dining</h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<h4 class="font-bold text-slate-900">On-Campus Housing</h4>
+</div>
+<div class="flex items-center bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs font-bold">
+                                4.5 <span class="material-symbols-outlined text-[10px] ml-0.5">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 mb-3">Guaranteed for 4 years. Options range from traditional dorms to themed houses and co-ops.</p>
+<div class="flex gap-2">
+<span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">Modern Amenities</span>
+<span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">Safe</span>
+</div>
+</div>
+<div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600">restaurant_menu</span>
+<h4 class="font-bold text-slate-900">Dining Services</h4>
+</div>
+<div class="flex items-center bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs font-bold">
+                                4.2 <span class="material-symbols-outlined text-[10px] ml-0.5">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 mb-3">8 Dining halls with diverse cuisines including vegan, halal, and gluten-free options.</p>
+<div class="flex gap-2">
+<span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">Organic</span>
+<span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">Late Night</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white p-4 pb-6">
+<h3 class="text-lg font-bold mb-4">Student Voices</h3>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 -mx-4 px-4 pb-2 snap-x">
+<div class="snap-center flex-shrink-0 w-72 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<img alt="Student" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMO-6Ur2Yp1da1gHRctuFy8M7QqVoDNzmMZI4OUAPmmjeadwKo5sprL6vBdbGKjrQCVAflAyTtcVaWFawZwLbGXLklfbh1mCmMAprNI3SFVGVm5nwf6TKyYxmNLdXs2zXjmIO7-aJ4tuF8io6ockFgVFLhJxEUKJpGtcUJLsRNPkbstzR5BDAx8IUQK6hzlz4BlAzpEjasjAIL3MZ0JIBNlc76YWU7tU56f6PWqfK-MtVLI9Y3NueLwGU0Ych0DkxctWyycMQa-lMh"/>
+<div>
+<p class="text-sm font-bold text-slate-900">Priya Sharma</p>
+<p class="text-xs text-slate-500">Computer Science, '25</p>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+</div>
+<p class="text-slate-600 text-sm italic">"The sheer number of clubs here is insane. I found my community in the robotics club immediately. It's intense but so rewarding."</p>
+</div>
+<div class="snap-center flex-shrink-0 w-72 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold">R</div>
+<div>
+<p class="text-sm font-bold text-slate-900">Rahul Verma</p>
+<p class="text-xs text-slate-500">Economics, '24</p>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm font-fill">star</span>
+<span class="material-symbols-outlined text-sm text-slate-200">star</span>
+</div>
+<p class="text-slate-600 text-sm italic">"Housing is great, especially the themed houses. Dining hall food gets a bit repetitive, but the late-night options save you during finals."</p>
+</div>
+</div>
+</section>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-white border-t border-slate-200 flex justify-between px-6 py-2 z-50">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">home</span>
+<span class="text-[10px] text-slate-500 mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">group</span>
+<span class="text-[10px] text-slate-500 mt-1">Network</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+<span class="text-[10px] text-slate-500 mt-1">Notifications</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-500">mail</span>
+<span class="text-[10px] text-slate-500 mt-1">Messages</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="size-6 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMO-6Ur2Yp1da1gHRctuFy8M7QqVoDNzmMZI4OUAPmmjeadwKo5sprL6vBdbGKjrQCVAflAyTtcVaWFawZwLbGXLklfbh1mCmMAprNI3SFVGVm5nwf6TKyYxmNLdXs2zXjmIO7-aJ4tuF8io6ockFgVFLhJxEUKJpGtcUJLsRNPkbstzR5BDAx8IUQK6hzlz4BlAzpEjasjAIL3MZ0JIBNlc76YWU7tU56f6PWqfK-MtVLI9Y3NueLwGU0Ych0DkxctWyycMQa-lMh"/>
+</div>
+<span class="text-[10px] text-slate-500 mt-1">Profile</span>
+</div>
+</nav>
+<div class="fixed bottom-1 left-0 right-0 max-w-[430px] mx-auto flex justify-center pointer-events-none z-[60]">
+<div class="w-32 h-1.5 bg-slate-300 rounded-full"></div>
+</div>
+</div>
+
+</body></html>
