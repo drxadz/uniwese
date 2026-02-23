@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Counselor Discovery Screen - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#338038", "background-light": "#f6f8f6", "background-dark": "#151d15"}, fontFamily: {display: "Inter"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative mx-auto min-h-screen max-w-md bg-white dark:bg-slate-950 flex flex-col pb-24">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full"></div>
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back_ios</span>
+<h1 class="text-xl font-bold tracking-tight">Counselor Support</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</header>
+<!-- Search Bar -->
+<div class="px-4 py-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-xl py-3 pl-11 pr-4 focus:ring-2 focus:ring-primary/20 text-sm placeholder:text-slate-500 transition-all" placeholder="Find an advisor by name or university..." type="text"/>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex overflow-x-auto no-scrollbar gap-2 px-4 pb-4">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white text-sm font-medium">All Advisors</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:border-primary transition-colors">Admissions</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:border-primary transition-colors">SOP Review</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:border-primary transition-colors">Visa Help</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:border-primary transition-colors">Scholarships</button>
+</div>
+<!-- Top Rated Counselors Carousel -->
+<section class="py-4">
+<div class="flex justify-between items-center px-4 mb-4">
+<h2 class="text-lg font-bold">Top Rated Counselors</h2>
+<a class="text-primary text-sm font-semibold" href="#">See All</a>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-4 px-4">
+<!-- Carousel Item 1 -->
+<div class="min-w-[280px] bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="h-40 w-full bg-cover bg-center relative" data-alt="Professional female academic advisor smiling in a modern office environment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkYZCMFCIkuUiNv_N2nrNegpTz4IKr7-yj7TFfGWfoxZ2MQN48x6vWj14dNbvUMUTsH9f0-nQBnFI7G9bpn_v95qN8Uqjhe9CNVMJJhNcJrUThS18s9qStagJGwUzGK5US2dT_Ac7Tn8dyOE8TP593CJ-22-537ceykv7vjgaxm3Ii2INiB_dRfl_JMT301BxnknLW3PO_0Qee7muv83ZibCn6w4ACTvFOrbz_Orq4vrm2VxNupEgnjEmLQcTiz4R2HWHLp66rRsrF')">
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.9</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-base">Dr. Sarah Jenkins</h3>
+<p class="text-slate-500 text-xs mb-3">Ivy League Admissions Specialist</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Stanford Alumni</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded uppercase tracking-wider">SOP Guru</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 rounded-lg transition-colors text-sm">Consult Now</button>
+</div>
+</div>
+<!-- Carousel Item 2 -->
+<div class="min-w-[280px] bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="h-40 w-full bg-cover bg-center relative" data-alt="Experienced male counselor in a professional suit and glasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvuPJ8VAiHMJR0yJTV0rcKdm8Jm-mfuru5QILjgV9IczrOiDdB9TkLWCAUghI0O1mcq3UVBd0g5M5q1JkwwlA6ACtf3Vn5xqLKPrm-1ERCb9LwA4wJEtdBBLrEDxm6JPRqHJUC4b-f-aF89Rf8fWOlU4-8TELgCSLShEs3BKmhCDAEd8cBB-U0ImqkAwZ-5JdXimBFWvZsvg9iOjKPPJgv-M41AjES22HHBhRYPwimacHARpva0DqQDt3VPF7G2mTNBCwAfP1pyMKT')">
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-base">Rajiv Mehra</h3>
+<p class="text-slate-500 text-xs mb-3">Former US Consulate Visa Officer</p>
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider">Visa Expert</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold rounded uppercase tracking-wider">12y Exp</span>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-2 rounded-lg transition-colors text-sm">Consult Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- All Counselors Vertical List -->
+<section class="px-4 py-4">
+<h2 class="text-lg font-bold mb-4">Available Advisors</h2>
+<div class="space-y-4">
+<!-- Advisor Card 1 -->
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="relative shrink-0">
+<div class="w-16 h-16 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-800" data-alt="Female professional portrait for profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb4WG2XfgurZthSVRltYtAf_2VcD1cnsn7v6eIwxGzsqA46uqSHcRompxN-VdxDmm6FxbZrWRBkE-diPXGlRDkbZC7VkfK7-kvSSAsdtPE7mN4VWDb_z8S5v_itVAhpu-4rkxlLs31MI7TXrljb-aBfUakuRWDRgL5a3HFlrJgHDWFY7tSgafy4dDXIVLHYwIwoD3BUzc0h6vdgdgUU0dg5ijUUeil_BGwuN5LdUJXAUw28po1x3VeSXtRpyUkjdtqmcYidwCu9X3u')"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white dark:border-slate-800 rounded-full"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Anjali Sharma</h4>
+<p class="text-slate-500 text-xs mt-0.5">Scholarships &amp; Financial Aid</p>
+</div>
+<div class="flex items-center gap-1 bg-slate-50 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-yellow-500 text-[14px] fill-1">star</span>
+<span class="text-[10px] font-bold">4.9</span>
+</div>
+</div>
+<div class="mt-2 flex items-center gap-3 text-[11px] text-slate-400 font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">work</span> 8 Years</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">school</span> Oxford Graduate</span>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 bg-primary text-white text-xs font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Consult</button>
+<button class="px-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-sm">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Advisor Card 2 -->
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="relative shrink-0">
+<div class="w-16 h-16 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-800" data-alt="Male professional counselor headshot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOhEyCbVLsJY5iQ3iEozK6yuFK_GsinWmrfQjz8TmRbsAZhgQs9kQvMhq-GNRF203F8L9aFoNHlLBYMNnNW--yfEEbDgV6D7jksYr2IkxserW82ru2WhLrAgIRNMX_UA0NzSeSyrE0wl8sE7qqEluE8Dr8etGK0Q-zyDrrMLDugERmPndzuUHj6y6YTpnJ9eQNboV6nTS68XBS30JMLR1a--lT_qB2c4XrjLaY8Fq7ByfBfpMPtBWmbciF_UK0_TrEvoWZxW5NWtPR')"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-800 rounded-full"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Amit Verma</h4>
+<p class="text-slate-500 text-xs mt-0.5">Europe &amp; Germany Specialist</p>
+</div>
+<div class="flex items-center gap-1 bg-slate-50 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-yellow-500 text-[14px] fill-1">star</span>
+<span class="text-[10px] font-bold">4.7</span>
+</div>
+</div>
+<div class="mt-2 flex items-center gap-3 text-[11px] text-slate-400 font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">work</span> 5 Years</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">public</span> Global Mobility</span>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 bg-primary text-white text-xs font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Consult</button>
+<button class="px-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-sm">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Advisor Card 3 -->
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="relative shrink-0">
+<div class="w-16 h-16 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-800" data-alt="Female academic coach portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtyXiyqS96XKBpJBhBtYkj6JY0GF9OoWM_Rke0wlOS2KrHZYQy2hSYqgBEn7rfryzFSmKzrjGaD-q2n6bxuwlVal5hKH20pEkswiIqHVAsR2z3Rmbc7FG-acUu3PBghZg_kCZKlN-RTt1ISf0Lr9GSFK_MKlj1VUm33uSQRxbbsep80mJOstsjRiKfiXRPvqVR3_n0bXnHNY4m05zAZzGMpusCCc1uCyiKZxkTezOz7XDcZBmdQzP2T-V18iKgljzXIbhPBHKKfsGO')"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-white dark:border-slate-800 rounded-full"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Priya Kapoor</h4>
+<p class="text-slate-500 text-xs mt-0.5">Ex-Stanford Admissions Officer</p>
+</div>
+<div class="flex items-center gap-1 bg-slate-50 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-yellow-500 text-[14px] fill-1">star</span>
+<span class="text-[10px] font-bold">5.0</span>
+</div>
+</div>
+<div class="mt-2 flex items-center gap-3 text-[11px] text-slate-400 font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">work</span> 15 Years</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">edit_note</span> Essay Strategist</span>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 bg-primary text-white text-xs font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Consult</button>
+<button class="px-3 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-400 text-sm">chat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar (LinkedIn Style) -->
+<nav class="fixed bottom-0 left-0 right-0 mx-auto max-w-md bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 flex justify-between items-center px-2 py-2 safe-area-bottom z-50">
+<a class="flex flex-col items-center flex-1 py-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center flex-1 py-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium mt-1">Network</span>
+</a>
+<a class="flex flex-col items-center flex-1 py-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined fill-1">school</span>
+<div class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full border border-white"></div>
+</div>
+<span class="text-[10px] font-semibold mt-1">Advisors</span>
+</a>
+<a class="flex flex-col items-center flex-1 py-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-medium mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center flex-1 py-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-medium mt-1">Messages</span>
+</a>
+<a class="flex flex-col items-center flex-1 py-1 text-slate-500 dark:text-slate-400" href="#">
+<div class="w-6 h-6 rounded-full bg-slate-200 overflow-hidden border border-slate-300">
+<div class="w-full h-full bg-cover bg-center" data-alt="User profile thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrkpmQUaCgkxmuB0eC48weQagANH5d607hYB9tKsqqLNNySLVCZPWe6e-9DvwGK72TeU9jhnkZNJKnQ3jHQMhze-SzlnKTwE5IR-L2XaP6E55AULmukNAw1wgAePLI5spP2zObuzY-uRl35V0kR6kyUoz1dZJf4tnFvjkghWWgmb_ner0XviUf_aiSKkkPB6YBSKsxJlE2oqgl8DpTNvtHIG5xL34EvMKXlO1WqR5r7G-Oq3FSqk6twzQ_oczeYNNDI-v0w3xWLj52')"></div>
+</div>
+<span class="text-[10px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+<!-- Safe Area Padding for iOS -->
+<div class="h-8 w-full bg-white dark:bg-slate-950"></div>
+</div>
+</body></html>

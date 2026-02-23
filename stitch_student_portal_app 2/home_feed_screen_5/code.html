@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniWese Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f3f2ef",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100dvh;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="flex items-center gap-3 max-w-2xl mx-auto">
+<div class="size-9 rounded-full bg-cover bg-center shrink-0 border border-slate-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN3NN1WgAVn5Z_WuzfrJSxqQqORX1FK81SZysWdh83Oq9vLYlYrOSFuG0Oj0TuzdlnvBHSq-w_Mp-FmrmtDYt0qVUFm1rtFynFjdqB3v0nbwej6XiPIYFTm_5kADW7MgYkxxJHU6hUsRXzE_0yhJNnjLmLNvavrszPu19ENG4P-4auyzal2jXFIfbvvCauRMuU1Qq8gYjQLp-F9d42z5Rw0MiyAA2OqjMCD7lOTG0_GSn_1_QQLWFKSijLmko9D0nqhUFcGzVDiDmy')"></div>
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">search</span>
+<input class="w-full h-10 bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500" placeholder="Search for anything..." type="text"/>
+</div>
+<button class="text-slate-600 dark:text-slate-400 relative">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto p-3 space-y-4">
+<section>
+<h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 px-1">Services</h2>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm active:scale-95 transition-transform">
+<div class="size-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">psychology</span>
+</div>
+<span class="text-sm font-semibold">AI Matcher</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm active:scale-95 transition-transform">
+<div class="size-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-400">school</span>
+</div>
+<span class="text-sm font-semibold">Scholarship Finder</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm active:scale-95 transition-transform">
+<div class="size-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">payments</span>
+</div>
+<span class="text-sm font-semibold">Loan Assistant</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm active:scale-95 transition-transform">
+<div class="size-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-purple-600 dark:text-purple-400">support_agent</span>
+</div>
+<span class="text-sm font-semibold">Counselor Help</span>
+</button>
+</div>
+</section>
+<section>
+<h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 px-1">Quick Status</h2>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-4">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">assignment_turned_in</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">University of Toronto</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">MSc Computer Science • Spring 2025</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="size-2 rounded-full bg-amber-500"></span>
+<span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">Under Review</span>
+</div>
+</div>
+<button class="text-primary text-xs font-bold">View</button>
+</div>
+</section>
+<section class="space-y-4 pt-2">
+<h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 px-1">Community Feed</h2>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmYtkeXYISDbiyVm_wTVBmjpxGXGr_ZPuBbP5kRKM5XzEwhbsS40ZM7aJ-rg20t19gWjiNvBERc5JaLygt2JujZmvwSnAUHsNnQOaI3fnBtanqHzwq5u61aK2O3nOaOLCJ6qE3m2TV8LPvrpzdCeBk-vE5Vk_OHk1GCkRM22k56ez5qcYlfFS6Q-ZvDR-V6DoBKEU5gf1NhD57W60IVDRQBvOBirJp5Su6NWAGUERikKptcO3-RytAVXcZs5TkbuBotS92p9vOzAQU')"></div>
+<button class="flex-1 text-left px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-500 text-sm font-medium bg-slate-50 dark:bg-slate-800/50">
+                    Share an update...
+                </button>
+</div>
+</div>
+<article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div class="p-4 pb-2 flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-12 rounded-full bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHByeo-VvY5ZD5QHc4FQ7jyjnMUDqhmFjQ0-849etd4mqRh1yJeutYC6HwR63pcLCqG-tnk1Aplzffwq-AHD2degtd_UgjjG-q_D1ypKhNeqzcwJI5UAfTsCiIGp101_CknEzIlvxvMgKg7UVQua4rTBmK8dNVe_Wi0iZ0slcXKYC2hidNoKyblTwhpO7T2x_gdBTBZGKyNrkzC_gx9-yjD16qb73v-OqAY7sGOSsFajqsjF-XJ6CtUl3gywugUB0cZCA8sATEK6sG')"></div>
+<div>
+<h3 class="text-sm font-bold leading-tight">Rohan Gupta</h3>
+<p class="text-[11px] text-slate-500">JEE Aspirant • 2025 Batch</p>
+<p class="text-[11px] text-slate-400 flex items-center gap-1">2h • <span class="material-symbols-outlined text-[12px]">public</span></p>
+</div>
+</div>
+<button class="text-slate-400"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="px-4 py-2">
+<p class="text-sm text-slate-800 dark:text-slate-200 leading-normal">
+                    Just completed my first mock test for JEE Advanced! Physics was definitely a challenge. Any seniors have tips on managing time for multiple-correct questions? 📚🚀 #JEE #Preparation
+                </p>
+</div>
+<div class="mt-2">
+<div class="w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgs4beJfumrZZxNgA74prZP3dUYt36cPXNg9kXbLdLilf5MNud5RSoIIuABEjlhKVoGZfWE08cz9MvvXXz1ZNb9WyS4x159BhZmMstYCd5MSCSZ8ldqyMFS2i3k-MTrm-S2NCJw__MEI2bSxhYv1YNyYaC3YYkBeOjWeOCx6DJbIUVDG0TUFggZ6RkQFBP_gZN2acV1D6bVDN35GzeeWed91mrjjQx3qH010L9PHuhn4CLgNthKXie0WAGCz5wp_JEhPHj8caWh3gP')"></div>
+</div>
+<div class="px-4 py-3 flex justify-around border-t border-slate-100 dark:border-slate-800">
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">thumb_up</span> Like
+                </button>
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">comment</span> Comment
+                </button>
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">share</span> Share
+                </button>
+</div>
+</article>
+<article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div class="p-4 pb-2 flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-12 rounded-lg bg-cover bg-center shrink-0 border border-slate-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuXYc1NWmInrh3awEzV1VfZsl024MJBNvmxvsCZgKvduxSbRuwAFwCeC2NsDDSc3DZ7pftL6MDb_s0lZq-lNO0XgIuhkhJHSG8EmqacS6O-SrVOVE0JDYstZmB6jk5FFxFKZ_7wgEkDqhNf9D-O0FuLDPXngU0jk3BLf7Arv3EA3Pm_YyfmaXOpRAsfXEWHa-JfhFHBgmNFWV7fVffxbl61AnKp3iUVbt5uhYj-tyDKwA-ouR_VUe4x4HroDcwIiWAFFh3X2Q6XN2b')"></div>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="text-sm font-bold leading-tight">IIT Delhi</h3>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+<p class="text-[11px] font-medium text-primary">University Representative</p>
+<p class="text-[11px] text-slate-400">5h • <span class="material-symbols-outlined text-[12px]">public</span></p>
+</div>
+</div>
+<button class="text-slate-400"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="px-4 py-2">
+<p class="text-sm font-medium mb-1">Admissions Open for Undergraduate Programs 2024-25</p>
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-normal">
+                    The portal for the upcoming academic session is now live. Explore our diverse range of engineering disciplines.
+                </p>
+</div>
+<div class="mt-2 bg-primary/5 dark:bg-primary/10 border-y border-primary/10">
+<div class="w-full aspect-video bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5MVe38L2wEwj7FFLbYxOTMHvGDwXXtIN_zF3qqIxslTx39S47092fSBK4xgwUL2ojiSOxjBZE5cCO1um5Td2Fmmj_JqkQKCVxHI-AcTqoodX_tWTQwMa_-ZJYdEZ0FYdEemCAjAZZRMUMVuy_j4RsdOJKLIHjewR5ST7kOD0WPPssmXnhskrzBFktlfjhbKZJmAOIAmDFg1swPyCzvjjFAzUhyf4c6hMjpa4FSS_Ri2eLlPbHZETWIFuyIVr2UeQwoK8U69ffLHYF')"></div>
+<div class="p-3">
+<p class="text-xs font-bold">Apply Now - IIT Delhi Official Portal</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">admissions.iitd.ac.in</p>
+</div>
+</div>
+<div class="px-4 py-3 flex justify-around border-t border-slate-100 dark:border-slate-800">
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">thumb_up</span> Like
+                </button>
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">comment</span> Comment
+                </button>
+<button class="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-semibold text-xs">
+<span class="material-symbols-outlined text-xl">send</span> Send
+                </button>
+</div>
+</article>
+</section>
+<div class="h-24"></div>
+</main>
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center z-40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-50">
+<div class="max-w-2xl mx-auto flex items-center justify-between pb-safe pt-2 px-2">
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">group</span>
+<span class="text-[10px] font-medium">Network</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">apps</span>
+<span class="text-[10px] font-medium">Applications</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-[26px]">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+
+</body></html>

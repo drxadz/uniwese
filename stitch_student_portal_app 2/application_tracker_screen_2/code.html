@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Applications Dashboard - UniWese</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0a66c2",
+                        "background-light": "#f3f2ef",
+                        "background-dark": "#1d2226",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative mx-auto max-w-[430px] min-h-screen bg-white dark:bg-slate-900 shadow-2xl flex flex-col">
+<header class="sticky top-0 z-20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 pt-4 pb-2">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBrvumjfuppzGVIcZDk-nfcn3sMhp8clWAUqyurgiHmwix8uOw4YDN2X9hAS_F8m1UQKvQzqUON-DbjTyAVSjM4DHoUTvOzv3A8YS__YV7m343BClEehJ33X1hiA0lAs86iI7KmBXmPhPnm28xPXN_PPlDkmvQYPZILRGREBjDrOk-NXN7CUPV4sZPhKTUGgs7jWyQFKgQSlLnClhpBXku-4YtV2yrXnnjLfg4SXcqujI0AoQ72CsxHx6yBkRlunJULCvs-E3E4nUK')"></div>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Applications</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">more_horiz</span>
+</button>
+</div>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex-shrink-0 w-32 p-3 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/10">
+<p class="text-[10px] font-semibold text-primary uppercase tracking-wider">Total</p>
+<p class="text-2xl font-bold text-primary">08</p>
+</div>
+<div class="flex-shrink-0 w-32 p-3 bg-amber-50 dark:bg-amber-900/10 rounded-xl border border-amber-100 dark:border-amber-900/30">
+<p class="text-[10px] font-semibold text-amber-600 uppercase tracking-wider">Pending</p>
+<p class="text-2xl font-bold text-amber-600">03</p>
+</div>
+<div class="flex-shrink-0 w-44 p-3 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-100 dark:border-red-900/30">
+<p class="text-[10px] font-semibold text-red-600 uppercase tracking-wider">Next Deadline</p>
+<p class="text-sm font-bold text-red-600">Dec 15 (UBC)</p>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto hide-scrollbar py-3">
+<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-primary text-white">All</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">In Progress</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Submitted</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Results</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<section>
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Action Required</h2>
+<span class="text-xs font-semibold text-primary">View all</span>
+</div>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-800 border-l-4 border-red-500 rounded-lg p-3 shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 mt-0.5">error</span>
+<div class="flex-1">
+<p class="text-sm font-bold">Upload Transcript for UBC</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Due in 2 days • Master of Data Science</p>
+</div>
+<button class="text-primary font-bold text-xs self-center">Upload</button>
+</div>
+<div class="bg-white dark:bg-slate-800 border-l-4 border-amber-500 rounded-lg p-3 shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-500 mt-0.5">info</span>
+<div class="flex-1">
+<p class="text-sm font-bold">LOR Pending: Dr. Mehta</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">IIT Bombay application</p>
+</div>
+<button class="text-primary font-bold text-xs self-center">Remind</button>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Active Tracking</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-700 p-1">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZwu_h5x1SHKxtLehE4k8wvrFr5YKrDr0zUuGTTtRTqJtQiKrBumR4GWGYDEH_THoRreSn7gy_d5-lyoJPLqWVW-AyumuKx_8lOB-ewjy3omAhSDISbKnHW9IoXuNXshO6hemgVpjgxlu8n3i8y2O7wth2MepDK1pecpsWWhvWiJXRepnE_mLPP3CMfOeQrpWD_PAxV7HF6yj61KJkURze_hvI6sbynfsuXxiTqEF32aIpo9lVUuTuTrSYvdRUnPUm1B_sIkwUd0-0')"></div>
+</div>
+<div>
+<h3 class="font-bold text-sm">University of Toronto</h3>
+<p class="text-xs text-slate-500">MSc Computer Science</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 uppercase">Submitted</span>
+</div>
+<div class="relative pt-2 pb-6">
+<div class="flex items-center w-full">
+<div class="w-1/4 h-1.5 bg-primary rounded-l-full"></div>
+<div class="w-1/4 h-1.5 bg-primary"></div>
+<div class="w-1/4 h-1.5 bg-primary"></div>
+<div class="w-1/4 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-r-full"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[9px] font-medium text-slate-400">Started</span>
+<span class="text-[9px] font-medium text-slate-400">Documents</span>
+<span class="text-[9px] font-bold text-primary">Submitted</span>
+<span class="text-[9px] font-medium text-slate-400">Decision</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-slate-500">
+<span>Last updated: Yesterday</span>
+<span class="text-primary font-semibold cursor-pointer">View App →</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-700 p-1">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdDVmNS0SK9iTL6ibtk6bOCleUoCFbrgL9J2mXYFhwntD-_vVkSPLh8VXTfg0LRZPT4HI2p85eKTqWRak5k1zM74b9rMpOrPed22DS0bKz8xgFe9-LzF-Iui6lIa8DorLHPoMG6cuJg-PXp-J0nSEmtksq7q3nkqlgNla9QtiF0Ni-0Zi4svzxhHOkcH_bTMDCfm3b0bFoy5lI11J4Q3oL-EuFdjHa1ww3ezNS1sjWrrj8oI23VcICcmrjRtU7MISnwPV8Fbia9dJ0')"></div>
+</div>
+<div>
+<h3 class="font-bold text-sm">IIT Bombay</h3>
+<p class="text-xs text-slate-500">B.Tech Mechanical</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 uppercase">Accepted</span>
+</div>
+<div class="relative pt-2 pb-6">
+<div class="flex items-center w-full">
+<div class="w-full h-1.5 bg-green-500 rounded-full"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[9px] font-medium text-slate-400">Started</span>
+<span class="text-[9px] font-medium text-slate-400">Documents</span>
+<span class="text-[9px] font-medium text-slate-400">Submitted</span>
+<span class="text-[9px] font-bold text-green-600">Decision</span>
+</div>
+</div>
+<button class="w-full py-2 bg-green-600 text-white rounded-lg text-xs font-bold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">celebration</span>
+                            View Offer Letter
+                        </button>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-700 p-1">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6QAIZlxiykx1VdA2wjJAB-Lrl7OIMosOwdgSt_5uFkbGXSq4ZvS3j7x5AXxxTfX3Ld5owRrs80aAlCGZIoZvujfDhrJBXO0qM0LLVWwiC98XpGphoTXeSumXxO8zgzrUWypy3lMIFODpJMTsRFBK4cqX9zXXuhCyuB53Ats2-9kBHIxEC3WmBjHQSBnrhHnWQEa1RzxyoTSwDSpwuBSNmlhjtmb6EzF-9RZ9v2JGnQCBexD-u0tFJe2Q3RiCYzLR-y66AJtnT6nK7')"></div>
+</div>
+<div>
+<h3 class="font-bold text-sm">University of Delhi</h3>
+<p class="text-xs text-slate-500">BA Economics (Hons)</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 uppercase">In Progress</span>
+</div>
+<div class="relative pt-2 pb-6">
+<div class="flex items-center w-full">
+<div class="w-1/4 h-1.5 bg-amber-500 rounded-l-full"></div>
+<div class="w-3/4 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-r-full"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[9px] font-bold text-amber-600">Started</span>
+<span class="text-[9px] font-medium text-slate-400">Documents</span>
+<span class="text-[9px] font-medium text-slate-400">Submitted</span>
+<span class="text-[9px] font-medium text-slate-400">Decision</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-slate-500">
+<span>Deadline: Dec 30</span>
+<span class="text-primary font-semibold cursor-pointer">Continue →</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-6 pt-2 z-30">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Network</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined material-symbols-filled">task</span>
+<span class="text-[10px] font-bold">Applications</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="#">
+<div class="w-6 h-6 rounded-full border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBrvumjfuppzGVIcZDk-nfcn3sMhp8clWAUqyurgiHmwix8uOw4YDN2X9hAS_F8m1UQKvQzqUON-DbjTyAVSjM4DHoUTvOzv3A8YS__YV7m343BClEehJ33X1hiA0lAs86iI7KmBXmPhPnm28xPXN_PPlDkmvQYPZILRGREBjDrOk-NXN7CUPV4sZPhKTUGgs7jWyQFKgQSlLnClhpBXku-4YtV2yrXnnjLfg4SXcqujI0AoQ72CsxHx6yBkRlunJULCvs-E3E4nUK')"></div>
+</div>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>
